@@ -1,0 +1,1550 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__AddCaseComment"
+        },
+        "Label": "Add Case Comment",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Add_To_Swarm"
+        },
+        "Label": "Add Member To Swarm",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__AddAttnd"
+        },
+        "Label": "Add or Modify Service Appointment Attendees",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Add_By_Skill"
+        },
+        "Label": "Add To Swarm By Skill",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Add_By_User"
+        },
+        "Label": "Add To Swarm By User",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000mcgCHAAY"
+        },
+        "Label": "After Update-opportunity",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__EvaluateApproval"
+        },
+        "Label": "Approvals Workflow: Evaluate Approval Requests",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__ProcessAppvlSbms"
+        },
+        "Label": "Approvals Workflow: Process Approval Submission",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/prm_slack_flows__DealApproval"
+        },
+        "Label": "Approve a Deal",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/cms_orch__CMS_BasicApprovalRequest"
+        },
+        "Label": "Basic Approval Request",
+        "ProcessType": "ManagedContentAuthoringWorkflow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Begin_Swarming"
+        },
+        "Label": "Begin Swarming",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Begin_Swarming_Teams"
+        },
+        "Label": "Begin Swarming For Teams",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Inv_Book"
+        },
+        "Label": "Book Appointment from Invitation",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TffoDAAR"
+        },
+        "Label": "BU Team Remarks",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__CancelOrder"
+        },
+        "Label": "Cancel Order",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TfY8IAAV"
+        },
+        "Label": "Capture Site Visit Outcome",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/omnichannel_chat__QueuesChat"
+        },
+        "Label": "Chats Routed to Agents and Queues",
+        "ProcessType": "RoutingFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/omnichannel_chat__SkillsChat"
+        },
+        "Label": "Chats Routed to Agents with the Right Skills",
+        "ProcessType": "RoutingFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__ChkFlowApiName"
+        },
+        "Label": "Check Flow API Name",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Omni_Entities_Validator"
+        },
+        "Label": "Check for Service Channel and Skill",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Check_Preconditions"
+        },
+        "Label": "Check for Swarming Preconditions",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__CheckRepAvailability"
+        },
+        "Label": "Check Rep Availability for Routing",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__CloneSwarmMmbrSkill"
+        },
+        "Label": "Clone Swarm Member with Skill Requirements",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__CloseCase"
+        },
+        "Label": "Close Case",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Close_Selected_Swarm"
+        },
+        "Label": "Close Selected Swarm",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/cms_orch__CMS_EvalApprovalStepStatus"
+        },
+        "Label": "CMS: Check Whether Any Step is Completed",
+        "ProcessType": "EvaluationFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/cms_orch__CMS_NotifyRequester"
+        },
+        "Label": "CMS: Notify Content Author",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/cms_orch__CMS_ReviewContent"
+        },
+        "Label": "CMS: Review Content",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/cms_orch__CMS_ReviseContent"
+        },
+        "Label": "CMS: Submit Content for Review",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/cms_orch__CMS_WithdrawReviewRequest"
+        },
+        "Label": "CMS: Withdraw Review Request",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__CompleteSwarm"
+        },
+        "Label": "Complete Swarm",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__CompleteSwarmRecords"
+        },
+        "Label": "Complete Swarm Records",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TfT3oAAF"
+        },
+        "Label": "Cost Sheet mail",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000md7fVAAQ"
+        },
+        "Label": "Costing sheet After Save",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_service_experience__Create_Case"
+        },
+        "Label": "Create a Case",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__CreateCase"
+        },
+        "Label": "Create Case",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__CreateCaseEnhancedData"
+        },
+        "Label": "Create Case with Enhanced Data",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__CreaDrftAppvl"
+        },
+        "Label": "Create Draft Flow Approval Process",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sales_sfa_flows__CreateSalesContact"
+        },
+        "Label": "Create Sales Contact Record",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sales_sfa_flows__CreateSalesLead"
+        },
+        "Label": "Create Sales Lead Record",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sales_sfa_flows__CreateSalesPA"
+        },
+        "Label": "Create Sales Person Account Record",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/industries_fsc__CreateSlackAccChannel"
+        },
+        "Label": "Create Slack Channel for Account",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/fsc_tearsheet_agent__CreateSummaryDoc"
+        },
+        "Label": "Create Summary Document",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_industries_visit__CreateVisit"
+        },
+        "Label": "Create Visit",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Create_WL"
+        },
+        "Label": "Create Waitlist",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sfdatakit__DeployDataKitComponents"
+        },
+        "Label": "Deploy Data Kit Components",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__EnrlAttnd"
+        },
+        "Label": "Enroll or Unenroll Service Appointment Attendees",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000nnGDtAAM"
+        },
+        "Label": "EPC Agent Project Data",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000R8CNqAAN"
+        },
+        "Label": "EPC Approval Process for Drawing",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000RAHpdAAH"
+        },
+        "Label": "EPC Approval Process for Material Requisition",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000R8Sh8AAF"
+        },
+        "Label": "EPC Approval Process for Material Takeoffs",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000RAUWkAAP"
+        },
+        "Label": "EPC Approval Process for Project",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QgeuvAAB"
+        },
+        "Label": "EPC Daily Progress Update EV RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QmjwjAAB"
+        },
+        "Label": "EPC Equipment Log Creation RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QgLcAAAV"
+        },
+        "Label": "EPC Material Requisition Approval to RFQ RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QgczZAAR"
+        },
+        "Label": "EPC Stage Gate Guard RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QgaXzAAJ"
+        },
+        "Label": "EPC Submittal Workflow RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QmdXzAAJ"
+        },
+        "Label": "EPC Timesheet Approval RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QmhjdAAB"
+        },
+        "Label": "EPC Warranty Case Assignment RTF",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QzoIhAAJ"
+        },
+        "Label": "EPC WBS From Template Creation new",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000Qzx0zAAB"
+        },
+        "Label": "EPC WBS From Template Sub-Flow",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000Qkv17AAB"
+        },
+        "Label": "EPC_ProgressClaim_Monthly_Sched",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QkvXNAAZ"
+        },
+        "Label": "EPC_RFI_SLA_Scheduler",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "Scheduled",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000SbsULAAZ"
+        },
+        "Label": "EPC_RTF_updateDailyProgress",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Execute_Swarming_Steps"
+        },
+        "Label": "Execute Swarming Steps",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sfdc_fieldservice__CreateLeadAndOpp"
+        },
+        "Label": "Field Service Mobile: Create Leads and Opportunities",
+        "ProcessType": "FieldServiceMobile",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sfdc_fieldservice__GenPreWorkBrief"
+        },
+        "Label": "Field Service Mobile: Generate Pre Work Brief",
+        "ProcessType": "PromptFlow",
+        "TriggerType": "Capability",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__FinalizeDeliveryTime"
+        },
+        "Label": "Finalize Delivery Time",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__FinalizeReservation"
+        },
+        "Label": "Finalize Reservation",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_service_folmessaging__MSContact"
+        },
+        "Label": "Find Contact Associated with Messaging Session",
+        "ProcessType": "IndividualObjectLinkingFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Finish_Swarm"
+        },
+        "Label": "Finish Swarming",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000nhlLaAAI"
+        },
+        "Label": "Flow_Hidden_AI_Data",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000nfkM1AAI"
+        },
+        "Label": "Flow_Procurement AI – Intelligent Vendor Decision Engine",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000nkKHFAA2"
+        },
+        "Label": "FlowS_Procurement AI",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Inv_Gen"
+        },
+        "Label": "Generate Appointment Invitation",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_payments__GeneratePaymentLink"
+        },
+        "Label": "Generate Payment Link",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetAvailableTimeSlots"
+        },
+        "Label": "Get Available Time Slots",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetCaseByCaseNumber"
+        },
+        "Label": "Get Case By Case Number",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetCaseByVrfyCaseNbr"
+        },
+        "Label": "Get Case By Verified Case Number",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetCasesForContact"
+        },
+        "Label": "Get Cases For Contact",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetCasesVrfyCtct"
+        },
+        "Label": "Get Cases For Verified Contact",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetDeliveryTimeSlots"
+        },
+        "Label": "Get Delivery Time Slots",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetOrderByOrderNumber"
+        },
+        "Label": "Get Order By Order Number",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetOrdersByContact"
+        },
+        "Label": "Get Orders By Contact",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__GetUserContact"
+        },
+        "Label": "Get User Contact",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__IdentifyCustomer"
+        },
+        "Label": "Identify Customer By Email",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000svEgfAAE"
+        },
+        "Label": "Identify Customer By Email (Local)",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__In_Cancel"
+        },
+        "Label": "Inbound Cancel Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__In_Modify"
+        },
+        "Label": "Inbound Modify Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__In_New"
+        },
+        "Label": "Inbound New Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Guest_Flow"
+        },
+        "Label": "Inbound New Guest Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000Te6ysAAB"
+        },
+        "Label": "Log Enquiry",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/omnichannel_messaging__MsgRouting"
+        },
+        "Label": "Messages Routed to Agents and Queues",
+        "ProcessType": "RoutingFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/sfdc_fieldservice__MineUtterances"
+        },
+        "Label": "Mine Utterances for Guided Troubleshooting",
+        "ProcessType": "PromptFlow",
+        "TriggerType": "Capability",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__ModGstAppt"
+        },
+        "Label": "Modify Guest Service Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TcMgMAAV"
+        },
+        "Label": "New Enquiry",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_industries_recurrence__Orch"
+        },
+        "Label": "Orchestration flow for Recurrence Scheduler",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "Scheduled",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Out_Modify"
+        },
+        "Label": "Outbound Modify Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Flow"
+        },
+        "Label": "Outbound New Appointment",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__PymtLnk"
+        },
+        "Label": "Pay for Service Appointments",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__PostConvoAnalysis"
+        },
+        "Label": "Post-Conversation Analysis",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__ProcSimpleAppvl"
+        },
+        "Label": "Process Simple Approval",
+        "ProcessType": "ApprovalWorkflow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000QiNraAAF"
+        },
+        "Label": "Reason update",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__Rasgn_Appt"
+        },
+        "Label": "Reassign Multiple Service Appointments",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_industries_recurrence__Schdlr"
+        },
+        "Label": "Recurrence Schedule Flow",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/prm_slack_flows__DealRegistration"
+        },
+        "Label": "Register a Deal",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Reopen_The_Swarm"
+        },
+        "Label": "Reopen Swarm",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Swarm_Reopen_Procedure"
+        },
+        "Label": "Reopen Swarm Procedure",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__RqstFlowActv"
+        },
+        "Label": "Request Flow Activation",
+        "ProcessType": "ApprovalWorkflow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__ResetPassword"
+        },
+        "Label": "Reset Password",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_service_experience__Reset_Pwd"
+        },
+        "Label": "Reset Password",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__ResetScrPassword"
+        },
+        "Label": "Reset Secure Password",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__ReviewAppvlRqst"
+        },
+        "Label": "Review Approval Request",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__RvwFlowForActv"
+        },
+        "Label": "Review Flow for Activation",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000mwS6kAAE"
+        },
+        "Label": "Risk Evaluation After Save",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000VpG0vAAF"
+        },
+        "Label": "RTF_Accountmailsendflow",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000T2cAAAAZ"
+        },
+        "Label": "RTF_CalculatePercentage",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TFM2lAAH"
+        },
+        "Label": "RTF_Duration&predecessorFLOW",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordBeforeSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TpXpGAAV"
+        },
+        "Label": "Rtf_mrlinecheck_thresholdlimit",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TpUMkAAN"
+        },
+        "Label": "RTF_NotifylimitcrossThreshold",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000VlmSLAAZ"
+        },
+        "Label": "RTF_PscoreUpdateFLOW",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000UFldGAAT"
+        },
+        "Label": "RTF_RfqQueryNotificationFlow",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TfZltAAF"
+        },
+        "Label": "RTF_send notification - legal team",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TpU8DAAV"
+        },
+        "Label": "RTF_StockUpdateAFTERpO",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TwfJpAAJ"
+        },
+        "Label": "RTF_updatebudjectfromchangeorder",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000VlgoNAAR"
+        },
+        "Label": "RTF_updatefinaltechnicalscore",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TqO7JAAV"
+        },
+        "Label": "RTF_UpdateInventoryFrompom",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000TpSj7AAF"
+        },
+        "Label": "RTF_updateTotalStock",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000su77pAAA"
+        },
+        "Label": "RTF_WorkpackagestartDateUpdate",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Select_Swarm"
+        },
+        "Label": "Select an Available Swarm",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__send_Invt"
+        },
+        "Label": "Send Appointment Invitation to Actionable List Members",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000VoWXXAA3"
+        },
+        "Label": "Send Award Email",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Send_Slack_Updates"
+        },
+        "Label": "Send Slack Updates",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__SendVerificationCode"
+        },
+        "Label": "Send Verification Code",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/runtime_appointmentbooking__ConfigPymt"
+        },
+        "Label": "Set Payment Rates",
+        "ProcessType": "Appointments",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000sNJdzAAG"
+        },
+        "Label": "Submit Opp For Approval",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Member_Selection"
+        },
+        "Label": "Swarm Member Selection Process",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300bn00000Qf12nAAB"
+        },
+        "Label": "Test Flow Simple",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/case_swarming__Unarchive_Channel"
+        },
+        "Label": "Unarchive Swarm Channel",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__UpdateContactRcd"
+        },
+        "Label": "Update Customer Contact Record",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/standard_approvals__UpdtFlowDefVer"
+        },
+        "Label": "Update Flow Definition Version Status",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__UpdateVrfyCtct"
+        },
+        "Label": "Update Verified Contact",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000qUy8sAAC"
+        },
+        "Label": "Upload RFP document",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/SvcCopilotTmpl__VerifyCode"
+        },
+        "Label": "Verify Code",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_se__idv"
+        },
+        "Label": "Verify Customer Identity",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_se__baseidv"
+        },
+        "Label": "Verify Customer Identity Base Flow",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_se__idvbase"
+        },
+        "Label": "Verify Customer Identity Base V2",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_se__idvprimary"
+        },
+        "Label": "Verify Customer Identity V2",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_service_experience__Verify_Cust"
+        },
+        "Label": "Verify Identity",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_se__idvlinked"
+        },
+        "Label": "Verify Linked Customer Identity",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/setup_se__idvsecondary"
+        },
+        "Label": "Verify Linked Customer Identity V2",
+        "ProcessType": "Flow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/omnichannel_voice__VoiceRouting"
+        },
+        "Label": "Voice Calls Routed to Agents and Queues",
+        "ProcessType": "RoutingFlow",
+        "TriggerType": null,
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000nhlU5AAI"
+        },
+        "Label": "WBS AI Insight",
+        "ProcessType": "PromptFlow",
+        "TriggerType": "Capability",
+        "IsActive": true
+      },
+      {
+        "attributes": {
+          "type": "FlowDefinitionView",
+          "url": "/services/data/v66.0/sobjects/FlowDefinitionView/300am00000nhmLKAAY"
+        },
+        "Label": "WBS Item AI Insight Update",
+        "ProcessType": "AutoLaunchedFlow",
+        "TriggerType": "RecordAfterSave",
+        "IsActive": true
+      }
+    ],
+    "totalSize": 154,
+    "done": true
+  },
+  "warnings": []
+}
