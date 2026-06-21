@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Permit_to_Work__c</members>
+        <members>Observation__c</members>
+        <members>Incident__c</members>
+        <members>Toolbox_Talk__c</members>
+        <members>HIRA__c</members>
+        <members>Safety_Audit__c</members>
+        <members>Audit_Finding__c</members>
+        <members>Emergency_Plan__c</members>
+        <members>OHS_Compliance_Item__c</members>
+        <members>Equipment__c</members>
+        <members>NCR__c</members>
+        <members>Work_Front__c</members>
+        <members>Daily_Progress__c</members>
+        <members>Inspection_Test_Plan__c</members>
+        <members>Inspection_Request__c</members>
+        <members>CAPA__c</members>
+        <members>Calibration_Record__c</members>
+        <members>Completion__c</members>
+        <members>Commissioning_Procedure__c</members>
+        <members>Punch_List_Item__c</members>
+        <members>Handover_Package__c</members>
+        <members>Training_Record__c</members>
+        <members>Final_Acceptance__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>66.0</version>
+</Package>

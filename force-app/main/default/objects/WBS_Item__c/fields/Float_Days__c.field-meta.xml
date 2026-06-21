@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Float_Days__c</fullName>
+    <label>Total Float (Days)</label>
+    <description>Total slack = Late Finish - Early Finish (working days). Written by CPMEngine. Leaf is critical when &lt;= 0.</description>
+    <precision>6</precision>
+    <scale>0</scale>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

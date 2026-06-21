@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>B2B_Commerce_Service_Console</flexiPage>
+    <label>B2B Commerce Service Console</label>
+    <motif>Custom60: Umbrella</motif>
+</CustomTab>

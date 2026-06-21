@@ -1,0 +1,163 @@
+<template>
+    <article class={cardClass}>
+        <header class="gantt-header-bar">
+            <div class="gantt-title-block">
+                <lightning-icon icon-name="standard:goals" size="small" alternative-text="Schedule"></lightning-icon>
+                <div>
+                    <h2 class="gantt-title">WBS Schedule</h2>
+                    <template lwc:if={dateRangeLabel}>
+                        <p class="gantt-subtitle">{dateRangeLabel}</p>
+                    </template>
+                </div>
+            </div>
+            <div class="gantt-actions">
+                <lightning-button-icon
+                    icon-name="utility:refresh"
+                    alternative-text="Refresh schedule"
+                    title="Refresh"
+                    onclick={handleRefresh}
+                    class="slds-m-right_xx-small">
+                </lightning-button-icon>
+                <lightning-button
+                    label="New WBS Item"
+                    icon-name="utility:add"
+                    icon-position="left"
+                    variant="brand"
+                    onclick={handleNewWBS}>
+                </lightning-button>
+            </div>
+        </header>
+
+        <div class="gantt-body">
+            <template lwc:if={isLoading}>
+                <div class="gantt-state">
+                    <lightning-spinner alternative-text="Loading schedule..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:if={errorMessage}>
+                <div class="slds-notify slds-notify_alert slds-theme_error" role="alert">
+                    <lightning-icon icon-name="utility:error" size="x-small" alternative-text="Error"></lightning-icon>
+                    <span>{errorMessage}</span>
+                </div>
+            </template>
+
+            <template lwc:if={isEmpty}>
+                <div class="gantt-state">
+                    <lightning-icon icon-name="utility:date_time" size="large" alternative-text="No schedule"></lightning-icon>
+                    <p class="state-title">No WBS schedule data</p>
+                    <p class="state-hint">Add WBS items with baseline and current dates to populate the Gantt chart.</p>
+                    <lightning-button label="Create WBS Item" variant="brand" onclick={handleNewWBS} class="slds-m-top_small"></lightning-button>
+                </div>
+            </template>
+
+            <template lwc:if={hasRows}>
+                <section class="kpi-strip" aria-label="Schedule summary">
+                    <div class="kpi-card">
+                        <span class="kpi-label">Total</span>
+                        <span class="kpi-value">{totalCount}</span>
+                    </div>
+                    <div class="kpi-card kpi-warn">
+                        <span class="kpi-label">Delayed</span>
+                        <span class="kpi-value">{delayedCount}</span>
+                    </div>
+                    <div class="kpi-card kpi-danger">
+                        <span class="kpi-label">Critical</span>
+                        <span class="kpi-value">{criticalCount}</span>
+                    </div>
+                    <div class="kpi-card kpi-ok">
+                        <span class="kpi-label">On Track</span>
+                        <span class="kpi-value">{onTrackCount}</span>
+                    </div>
+                    <div class="kpi-card kpi-info">
+                        <span class="kpi-label">Avg Progress</span>
+                        <span class="kpi-value">{avgPct}</span>
+                    </div>
+                </section>
+
+                <div class="toolbar">
+                    <div class="filter-group">
+                        <span class="toolbar-label">Show:</span>
+                        <lightning-button label="All" variant={allFilterVariant} data-filter="all" onclick={handleFilter}></lightning-button>
+                        <lightning-button label="Critical" variant={criticalFilterVariant} data-filter="critical" onclick={handleFilter}></lightning-button>
+                        <lightning-button label="Delayed" variant={delayedFilterVariant} data-filter="delayed" onclick={handleFilter}></lightning-button>
+                    </div>
+                    <div class="legend">
+                        <span class="legend-item"><i class="swatch swatch-baseline"></i>Baseline</span>
+                        <span class="legend-item"><i class="swatch swatch-current"></i>Current</span>
+                        <span class="legend-item"><i class="swatch swatch-today"></i>Today</span>
+                    </div>
+                </div>
+
+                <p class="count-line">{countLabel}</p>
+
+                <template lwc:if={isFilterEmpty}>
+                    <div class="gantt-state gantt-state--compact">
+                        <p class="state-title">No items match this filter</p>
+                        <lightning-button label="Show All" variant="neutral" onclick={handleClearFilter}></lightning-button>
+                    </div>
+                </template>
+
+                <template lwc:if={hasDisplayRows}>
+                    <div class="gantt-scroll-wrap">
+                        <div class="gantt-chart">
+                            <div class="gantt-row gantt-row--header">
+                                <div class="gantt-left">
+                                    <div class="col col-code">Code</div>
+                                    <div class="col col-name">Activity</div>
+                                    <div class="col col-pct">Progress</div>
+                                    <div class="col col-var">Var (d)</div>
+                                    <div class="col col-status">Status</div>
+                                </div>
+                                <div class="gantt-right" style={timelineMinWidth}>
+                                    <div class="timeline-scale">
+                                        <template for:each={monthMarkers} for:item="m">
+                                            <div key={m.key} class="month-tick" style={m.lineStyle}>
+                                                <span class="month-label">{m.label}</span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <template for:each={displayRows} for:item="row">
+                                <div key={row.key} class={row.rowClass} data-id={row.id} onclick={handleRowClick}>
+                                    <div class="gantt-left">
+                                        <div class="col col-code" title={row.code}>{row.code}</div>
+                                        <div class="col col-name" title={row.name}>
+                                            <span class="name-text" style={row.indentStyle}>{row.name}</span>
+                                        </div>
+                                        <div class="col col-pct">
+                                            <div class="pct-bar">
+                                                <div class="pct-fill" style={row.progressStyle}></div>
+                                            </div>
+                                            <span class="pct-text">{row.percentComplete}</span>
+                                        </div>
+                                        <div class="col col-var">
+                                            <span class={row.varianceClass}>{row.varianceLabel}</span>
+                                        </div>
+                                        <div class="col col-status">
+                                            <span class={row.statusClass}>{row.statusBadge}</span>
+                                        </div>
+                                    </div>
+                                    <div class="gantt-right" style={timelineMinWidth}>
+                                        <div class="timeline-body">
+                                            <template for:each={monthMarkers} for:item="m">
+                                                <div key={m.key} class="grid-line" style={m.lineStyle}></div>
+                                            </template>
+                                            <div class="today-line" style={todayLineStyle}></div>
+                                            <div class="bar-lane">
+                                                <div class="gantt-bar gantt-bar--baseline" style={row.baselineBarStyle} title="Baseline"></div>
+                                                <div class="gantt-bar gantt-bar--current" style={row.currentBarStyle} title="Current"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </article>
+</template>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomNotificationType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customNotifTypeName>WBS_Delay_Alert</customNotifTypeName>
+    <desktop>true</desktop>
+    <mobile>true</mobile>
+    <description>Schedule delay and likelihood-of-delay alerts for WBS items.</description>
+    <masterLabel>WBS Delay Alert</masterLabel>
+</CustomNotificationType>

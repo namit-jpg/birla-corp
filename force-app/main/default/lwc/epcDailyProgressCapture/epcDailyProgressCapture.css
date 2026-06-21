@@ -1,0 +1,67 @@
+.wp-summary {
+    background: #f8f8f8;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+.wp-label { font-size: 0.75rem; color: #706e6b; text-transform: uppercase; font-weight: 600; }
+.wp-name  { font-size: 0.875rem; font-weight: 700; color: #032d60; margin-left: 4px; }
+.wp-pct   { font-size: 0.875rem; font-weight: 700; color: #032d60; }
+
+.progress-bar-track {
+    height: 0.5rem;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+.progress-bar-fill {
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+.progress-bar-ok   { background: #027e46; }
+.progress-bar-warn { background: #ff9e2c; }
+.progress-bar-low  { background: #c23934; }
+
+.form-panel {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.epc-datatable-wrap { width: 100%; }
+
+.count-label {
+    font-size: 0.75rem;
+    color: #706e6b;
+    font-weight: 500;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1px dashed #dddbda;
+}
+.empty-state--compact { padding: 2rem 1.5rem; }
+.empty-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3e3e3c;
+    margin-top: 0.75rem;
+}
+.empty-msg {
+    font-size: 0.8125rem;
+    color: #706e6b;
+    margin-top: 0.25rem;
+    max-width: 360px;
+}

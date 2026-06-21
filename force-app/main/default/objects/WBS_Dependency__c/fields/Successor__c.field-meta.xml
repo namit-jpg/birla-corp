@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Successor__c</fullName>
+    <label>Successor</label>
+    <description>The WBS Item that depends on the predecessor. Child relationship Predecessor_Links is queried by WBSTreeController.</description>
+    <referenceTo>WBS_Item__c</referenceTo>
+    <relationshipLabel>Predecessor Links</relationshipLabel>
+    <relationshipName>Predecessor_Links</relationshipName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

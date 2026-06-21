@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Stage</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mechanical Completion</fullName>
+                <default>true</default>
+                <label>Mechanical Completion</label>
+            </value>
+            <value>
+                <fullName>E&amp;I Completion</fullName>
+                <default>false</default>
+                <label>E&amp;I Completion</label>
+            </value>
+            <value>
+                <fullName>Pre-Commissioning</fullName>
+                <default>false</default>
+                <label>Pre-Commissioning</label>
+            </value>
+            <value>
+                <fullName>No-Load Trial</fullName>
+                <default>false</default>
+                <label>No-Load Trial</label>
+            </value>
+            <value>
+                <fullName>Load Trial</fullName>
+                <default>false</default>
+                <label>Load Trial</label>
+            </value>
+            <value>
+                <fullName>Cold Commissioning</fullName>
+                <default>false</default>
+                <label>Cold Commissioning</label>
+            </value>
+            <value>
+                <fullName>Hot Commissioning</fullName>
+                <default>false</default>
+                <label>Hot Commissioning</label>
+            </value>
+            <value>
+                <fullName>Performance Test</fullName>
+                <default>false</default>
+                <label>Performance Test</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

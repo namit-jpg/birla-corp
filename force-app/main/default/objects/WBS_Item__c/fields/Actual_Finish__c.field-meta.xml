@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Finish__c</fullName>
+    <label>Actual Finish</label>
+    <description>Capture point for actual end date: stamped when progress reaches 100%. Rolls up via CPMEngine.</description>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

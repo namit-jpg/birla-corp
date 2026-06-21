@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>HseHubController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>epcHseHub</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>EPC_Dashboard_Tabs</members>
+        <members>EPC_Object_Field_Access</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Audit_Finding_Record_Page</members>
+        <members>Calibration_Record_Record_Page</members>
+        <members>CAPA_Record_Page</members>
+        <members>Commissioning_Procedure_Record_Page</members>
+        <members>Completion_Record_Page</members>
+        <members>Daily_Progress_Record_Page</members>
+        <members>Emergency_Plan_Record_Page</members>
+        <members>Equipment_Record_Page</members>
+        <members>Final_Acceptance_Record_Page</members>
+        <members>Handover_Package_Record_Page</members>
+        <members>HIRA_Record_Page</members>
+        <members>Incident_Record_Page</members>
+        <members>Inspection_Request_Record_Page</members>
+        <members>Inspection_Test_Plan_Record_Page</members>
+        <members>NCR_Record_Page</members>
+        <members>Observation_Record_Page</members>
+        <members>OHS_Compliance_Item_Record_Page</members>
+        <members>Permit_to_Work_Record_Page</members>
+        <members>Punch_List_Item_Record_Page</members>
+        <members>Safety_Audit_Record_Page</members>
+        <members>Toolbox_Talk_Record_Page</members>
+        <members>Training_Record_Record_Page</members>
+        <members>Work_Front_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Audit_Finding__c-EPC Detail Layout</members>
+        <members>Calibration_Record__c-EPC Detail Layout</members>
+        <members>CAPA__c-EPC Detail Layout</members>
+        <members>Commissioning_Procedure__c-EPC Detail Layout</members>
+        <members>Completion__c-EPC Detail Layout</members>
+        <members>Daily_Progress__c-EPC Detail Layout</members>
+        <members>Emergency_Plan__c-EPC Detail Layout</members>
+        <members>Equipment__c-EPC Detail Layout</members>
+        <members>Final_Acceptance__c-EPC Detail Layout</members>
+        <members>Handover_Package__c-EPC Detail Layout</members>
+        <members>HIRA__c-EPC Detail Layout</members>
+        <members>Incident__c-EPC Detail Layout</members>
+        <members>Inspection_Request__c-EPC Detail Layout</members>
+        <members>Inspection_Test_Plan__c-EPC Detail Layout</members>
+        <members>NCR__c-EPC Detail Layout</members>
+        <members>Observation__c-EPC Detail Layout</members>
+        <members>OHS_Compliance_Item__c-EPC Detail Layout</members>
+        <members>Permit_to_Work__c-EPC Detail Layout</members>
+        <members>Punch_List_Item__c-EPC Detail Layout</members>
+        <members>Safety_Audit__c-EPC Detail Layout</members>
+        <members>Toolbox_Talk__c-EPC Detail Layout</members>
+        <members>Training_Record__c-EPC Detail Layout</members>
+        <members>Work_Front__c-EPC Detail Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Audit_Finding__c</members>
+        <members>Calibration_Record__c</members>
+        <members>CAPA__c</members>
+        <members>Commissioning_Procedure__c</members>
+        <members>Completion__c</members>
+        <members>Daily_Progress__c</members>
+        <members>Emergency_Plan__c</members>
+        <members>Equipment__c</members>
+        <members>Final_Acceptance__c</members>
+        <members>Handover_Package__c</members>
+        <members>HIRA__c</members>
+        <members>Incident__c</members>
+        <members>Inspection_Request__c</members>
+        <members>Inspection_Test_Plan__c</members>
+        <members>NCR__c</members>
+        <members>Observation__c</members>
+        <members>OHS_Compliance_Item__c</members>
+        <members>Permit_to_Work__c</members>
+        <members>Punch_List_Item__c</members>
+        <members>Safety_Audit__c</members>
+        <members>Toolbox_Talk__c</members>
+        <members>Training_Record__c</members>
+        <members>Work_Front__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>66.0</version>
+</Package>

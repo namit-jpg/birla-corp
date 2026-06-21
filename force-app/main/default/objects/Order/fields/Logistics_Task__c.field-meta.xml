@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logistics_Task__c</fullName>
+    <externalId>false</externalId>
+    <label>Logistics Task</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arrange Transport</fullName>
+                <default>false</default>
+                <label>Arrange Transport</label>
+            </value>
+            <value>
+                <fullName>Confirm Delivery Slot</fullName>
+                <default>false</default>
+                <label>Confirm Delivery Slot</label>
+            </value>
+            <value>
+                <fullName>Coordinate Last-Mile Delivery</fullName>
+                <default>false</default>
+                <label>Coordinate Last-Mile Delivery</label>
+            </value>
+            <value>
+                <fullName>Expedite Shipment</fullName>
+                <default>false</default>
+                <label>Expedite Shipment</label>
+            </value>
+            <value>
+                <fullName>Plan Inbound Receiving</fullName>
+                <default>false</default>
+                <label>Plan Inbound Receiving</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

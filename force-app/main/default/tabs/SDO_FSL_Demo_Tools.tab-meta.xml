@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: FSL Demo Tools Who: FSL &amp; Tooling Team</description>
+    <label>SFS Demo Tools</label>
+    <motif>Custom21: Computer</motif>
+    <page>SDO_Tool_FSLDemoTools</page>
+</CustomTab>

@@ -1,0 +1,42 @@
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #706e6b;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 110px;
+}
+.kpi-card.kpi-rate { border-left-color: #0070d2; background: #f0f6ff; }
+.kpi-card.kpi-warn { border-left-color: #ff9e2c; background: #fffbf0; }
+.kpi-label {
+    font-size: 0.7rem; color: #706e6b; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.04em;
+}
+.kpi-value { font-size: 1.4rem; font-weight: 700; color: #032d60; margin-top: 2px; }
+.kpi-sub   { font-size: 0.7rem; color: #706e6b; margin-top: 2px; }
+
+.qd-ok   { font-size: 1.4rem; font-weight: 700; color: #027e46; margin-top: 2px; }
+.qd-warn { font-size: 1.4rem; font-weight: 700; color: #ff9e2c; margin-top: 2px; }
+.qd-fail { font-size: 1.4rem; font-weight: 700; color: #c23934; margin-top: 2px; }
+.qd-minor{ color: #706e6b; }
+
+/* Severity breakdown boxes */
+.sev-box {
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    padding: 0.75rem;
+    background: #fff;
+}
+.sev-critical { font-size: 2rem; font-weight: 700; color: #c23934; }
+.sev-major    { font-size: 2rem; font-weight: 700; color: #ff9e2c; }
+.sev-minor    { font-size: 2rem; font-weight: 700; color: #706e6b; }
+.sev-label    { font-size: 0.75rem; color: #706e6b; text-transform: uppercase; margin-top: 4px; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.empty-state {
+    text-align: center;
+    color: #706e6b;
+    padding: 2rem;
+    font-size: 0.875rem;
+}

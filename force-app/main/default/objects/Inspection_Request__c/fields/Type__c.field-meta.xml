@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TPI</fullName>
+                <default>false</default>
+                <label>TPI</label>
+            </value>
+            <value>
+                <fullName>FAT</fullName>
+                <default>false</default>
+                <label>FAT</label>
+            </value>
+            <value>
+                <fullName>SAT</fullName>
+                <default>false</default>
+                <label>SAT</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>true</default>
+                <label>Internal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

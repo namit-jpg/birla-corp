@@ -1,0 +1,107 @@
+<template>
+    <lightning-card icon-name="standard:dashboard">
+        <span slot="title">Quality Dashboard</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New NCR" icon-name="utility:add" icon-position="left" variant="brand" onclick={handleNewNCR}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading quality data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+
+                <!-- KPI strip -->
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col kpi-card kpi-rate">
+                        <div class="kpi-label">Pass Rate</div>
+                        <div class={passRateClass}>{passRateDisplay}</div>
+                        <div class="kpi-sub">{kpis.passedInspections} / {kpis.totalInspections} passed</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-warn">
+                        <div class="kpi-label">Open NCRs</div>
+                        <div class="kpi-value">{kpis.openNCRs}</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-warn">
+                        <div class="kpi-label">Open CAPAs</div>
+                        <div class="kpi-value">{kpis.openCAPAs}</div>
+                    </div>
+                    <div class="slds-col kpi-card">
+                        <div class="kpi-label">Calib. Expired/Due</div>
+                        <div class={calibExpiredClass}>{kpis.expiredCalibrations}</div>
+                    </div>
+                </div>
+
+                <!-- NCR severity breakdown -->
+                <h3 class="slds-text-heading_small slds-m-bottom_x-small">NCR Severity Breakdown</h3>
+                <div class="slds-grid slds-gutters_x-small slds-m-bottom_medium">
+                    <template for:each={ncrSeverityData} for:item="sev">
+                        <div key={sev.key} class="slds-col">
+                            <div class="sev-box slds-text-align_center">
+                                <div class={sev.sevClass}>{sev.count}</div>
+                                <div class="sev-label">{sev.label}</div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Recent NCRs table -->
+                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_x-small">
+                    <h3 class="slds-text-heading_small">Recent NCRs</h3>
+                    <span class="slds-text-body_small slds-text-color_weak">{ncrCountLabel}</span>
+                </div>
+                <div class="epc-datatable-wrap">
+                    <lightning-datatable
+                        key-field="Id"
+                        data={recentNcrs}
+                        columns={ncrColumns}
+                        hide-checkbox-column
+                        column-widths-mode="auto"
+                        min-column-width="80"
+                        onrowaction={handleRowAction}>
+                    </lightning-datatable>
+                </div>
+                <template if:false={recentNcrs.length}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="utility:info" size="small" class="slds-m-bottom_x-small"></lightning-icon>
+                        <p>No NCRs recorded yet. Use <strong>New NCR</strong> to log a non-conformance.</p>
+                    </div>
+                </template>
+
+                <!-- Calibration alerts table -->
+                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-top_medium slds-m-bottom_x-small">
+                    <h3 class="slds-text-heading_small">Calibration Alerts</h3>
+                    <span class="slds-text-body_small slds-text-color_weak">{calibCountLabel}</span>
+                </div>
+                <div class="epc-datatable-wrap">
+                    <lightning-datatable
+                        key-field="Id"
+                        data={calibrationAlerts}
+                        columns={calibColumns}
+                        hide-checkbox-column
+                        column-widths-mode="auto"
+                        min-column-width="80"
+                        onrowaction={handleRowAction}>
+                    </lightning-datatable>
+                </div>
+                <template if:false={calibrationAlerts.length}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="utility:success" size="small" class="slds-m-bottom_x-small"></lightning-icon>
+                        <p>No calibration alerts — all instruments are current.</p>
+                    </div>
+                </template>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

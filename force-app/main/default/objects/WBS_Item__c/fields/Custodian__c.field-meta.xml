@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custodian__c</fullName>
+    <label>Custodian</label>
+    <description>Owner accountable for this WBS item; receives delay escalations for its children.</description>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>WBS Items (Custodian)</relationshipLabel>
+    <relationshipName>WBS_Items_Custodian</relationshipName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

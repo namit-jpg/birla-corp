@@ -1,0 +1,175 @@
+<template>
+    <lightning-card icon-name="standard:task">
+        <span slot="title">Daily Progress Capture</span>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <!-- Work Package selector -->
+            <div class="slds-m-bottom_small">
+                <lightning-record-picker
+                    label="Work Package"
+                    placeholder="Search and select a Work Package..."
+                    object-api-name="Work_Package__c"
+                    value={selectedWpId}
+                    onchange={handleWpChange}>
+                </lightning-record-picker>
+            </div>
+
+            <template if:true={isLoadingWp}>
+                <div class="slds-align_absolute-center slds-p-around_medium">
+                    <lightning-spinner alternative-text="Loading WP details..." size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- Main content: form + recent side-by-side -->
+            <template if:true={hasWp}>
+
+                <!-- WP summary bar -->
+                <div class="wp-summary slds-m-bottom_medium">
+                    <div class="slds-grid slds-gutters_xx-small slds-m-bottom_xx-small">
+                        <div class="slds-col">
+                            <span class="wp-label">Work Package:</span>
+                            <span class="wp-name">{wpName}</span>
+                        </div>
+                        <div class="slds-col slds-text-align_right">
+                            <span class="wp-label">Planned Qty:</span> <strong>{wpPlannedQty}</strong>
+                            &nbsp;|&nbsp;
+                            <span class="wp-label">Budget:</span> <strong>{wpBudget}</strong>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters_xx-small slds-p-bottom_xx-small">
+                        <div class="slds-col slds-size_10-of-12">
+                            <div class="progress-bar-track">
+                                <div class={progressClass} style={progressBarStyle}></div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-text-align_right">
+                            <span class="wp-pct">{wpPercent}%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two-pane layout -->
+                <div class="slds-grid slds-gutters_medium">
+
+                    <!-- LEFT: Entry form -->
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="form-panel">
+                            <h3 class="slds-text-heading_small slds-m-bottom_small">New DPR Entry</h3>
+
+                            <div class="slds-grid slds-wrap slds-gutters_xx-small">
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="date" label="Date" value={formDate}
+                                        onchange={handleFieldChange} data-field="formDate" required></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-combobox label="Weather" value={formWeather}
+                                        options={weatherOptions}
+                                        onchange={handleFieldChange} data-field="formWeather"
+                                        placeholder="Select..."></lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="number" label="Qty Installed" value={formQtyInstalled}
+                                        onchange={handleFieldChange} data-field="formQtyInstalled"
+                                        min="0" step="0.01" required></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="number" label="Planned Qty (Today)" value={formPlannedQty}
+                                        onchange={handleFieldChange} data-field="formPlannedQty"
+                                        min="0" step="0.01"></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="number" label="Hours Worked" value={formHoursWorked}
+                                        onchange={handleFieldChange} data-field="formHoursWorked"
+                                        min="0" step="0.5"></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="number" label="Crew Size" value={formCrewSize}
+                                        onchange={handleFieldChange} data-field="formCrewSize"
+                                        min="0"></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="number" label="Safety Incidents" value={formSafetyIncidents}
+                                        onchange={handleFieldChange} data-field="formSafetyIncidents"
+                                        min="0"></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input type="number" label="Quality Issues" value={formQualityIssues}
+                                        onchange={handleFieldChange} data-field="formQualityIssues"
+                                        min="0"></lightning-input>
+                                </div>
+                            </div>
+
+                            <template if:true={errorMessage}>
+                                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-top_small" role="alert">
+                                    <span>{errorMessage}</span>
+                                </div>
+                            </template>
+
+                            <div class="slds-m-top_medium slds-grid slds-gutters_xx-small">
+                                <div class="slds-col">
+                                    <lightning-button label="Reset" onclick={handleReset}></lightning-button>
+                                </div>
+                                <div class="slds-col slds-text-align_right">
+                                    <lightning-button variant="brand" label={saveLabel} onclick={handleSave} disabled={isSaving}></lightning-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Recent records -->
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="form-panel">
+                            <div class="slds-grid slds-gutters_xx-small slds-m-bottom_small">
+                                <div class="slds-col">
+                                    <h3 class="slds-text-heading_small">Recent Entries</h3>
+                                </div>
+                                <div class="slds-col slds-text-align_right">
+                                    <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" size="small" onclick={handleRefreshRecent}></lightning-button-icon>
+                                </div>
+                            </div>
+
+                            <template if:true={isLoadingRecent}>
+                                <lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+                            </template>
+
+                            <template if:false={isLoadingRecent}>
+                                <template if:true={hasRecentRecords}>
+                                    <div class="count-label slds-m-bottom_x-small">{recentCountLabel}</div>
+                                    <div class="epc-datatable-wrap">
+                                        <lightning-datatable
+                                            key-field="Id"
+                                            data={recentRecords}
+                                            columns={recentColumns}
+                                            hide-checkbox-column
+                                            column-widths-mode="auto"
+                                            min-column-width="80"
+                                            onrowaction={handleRowAction}>
+                                        </lightning-datatable>
+                                    </div>
+                                </template>
+                                <template if:false={hasRecentRecords}>
+                                    <div class="empty-state empty-state--compact">
+                                        <lightning-icon icon-name="standard:task" size="medium" alternative-text="No entries"></lightning-icon>
+                                        <h3 class="empty-title">No entries yet</h3>
+                                        <p class="empty-msg">Save your first DPR using the form on the left. Recent entries will appear here.</p>
+                                    </div>
+                                </template>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+            </template>
+
+            <template if:false={hasWp}>
+                <div class="empty-state slds-m-top_large">
+                    <lightning-icon icon-name="standard:work_order" size="large" alternative-text="Select work package"></lightning-icon>
+                    <h3 class="empty-title">Select a Work Package</h3>
+                    <p class="empty-msg">Choose a work package above to view progress and log daily entries.</p>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

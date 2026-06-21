@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Used to simulate external data Activites for Pardot. Who: Samatha Sanikommu and Kylie Yancey. When: Sept 2021.</description>
+    <label>Pardot - Create External Activities</label>
+    <motif>Custom83: Pencil</motif>
+    <page>SDO_Pardot_CreateExternalActivitiesCSV</page>
+</CustomTab>

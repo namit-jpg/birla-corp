@@ -1,0 +1,167 @@
+<template>
+    <lightning-card icon-name="standard:builder">
+        <span slot="title" class="slds-text-heading_small">Site Execution Board</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New NCR"        icon-name="utility:add" icon-position="left" variant="destructive-text" onclick={handleNewNCR} class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New Work Front" icon-name="utility:add" icon-position="left" variant="neutral"          onclick={handleNewWorkFront} class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New DPR"        icon-name="utility:add" icon-position="left" variant="brand"            onclick={handleNewDPR}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- KPI strip -->
+            <div class="kpi-strip slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="slds-col kpi-card">
+                    <div class="kpi-label">Open NCRs</div>
+                    <div class="kpi-value">{openNcrCount}</div>
+                </div>
+                <div class="slds-col {criticalKpiClass}">
+                    <div class="kpi-label">Critical NCRs</div>
+                    <div class="kpi-value">{criticalNcrCount}</div>
+                </div>
+                <div class="slds-col {blockedKpiClass}">
+                    <div class="kpi-label">Blocked Fronts</div>
+                    <div class="kpi-value">{blockedFronts}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-success">
+                    <div class="kpi-label">Released Fronts</div>
+                    <div class="kpi-value">{releasedFronts}</div>
+                </div>
+                <div class="slds-col {safetyKpiClass}">
+                    <div class="kpi-label">Safety Incidents (Recent)</div>
+                    <div class="kpi-value">{todaySafetyInc}</div>
+                </div>
+            </div>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading board data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <lightning-tabset>
+
+                    <!-- NCRs -->
+                    <lightning-tab label="NCRs" value="ncrs" icon-name="standard:non_profit">
+                        <div class="slds-p-top_small">
+                            <div class="slds-button-group slds-m-bottom_small" role="group">
+                                <template for:each={ncrFilterButtonsWithState} for:item="btn">
+                                    <lightning-button
+                                        key={btn.value}
+                                        label={btn.label}
+                                        variant={btn.variant}
+                                        data-value={btn.value}
+                                        onclick={handleNcrFilter}
+                                        class="filter-btn">
+                                    </lightning-button>
+                                </template>
+                            </div>
+
+                            <template if:true={hasNcrData}>
+                                <div class="count-label slds-m-bottom_x-small">{ncrCountLabel}</div>
+
+                                <template if:true={hasNcrMatches}>
+                                    <div class="epc-datatable-wrap">
+                                        <lightning-datatable
+                                            key-field="Id"
+                                            data={filteredNcrs}
+                                            columns={ncrColumns}
+                                            hide-checkbox-column
+                                            column-widths-mode="auto"
+                                            min-column-width="80"
+                                            onrowaction={handleNcrAction}>
+                                        </lightning-datatable>
+                                    </div>
+                                </template>
+
+                                <template if:false={hasNcrMatches}>
+                                    <div class="empty-state empty-state--compact">
+                                        <lightning-icon icon-name="utility:check" size="medium" alternative-text="No open NCRs"></lightning-icon>
+                                        <h3 class="empty-title">No open NCRs</h3>
+                                        <p class="empty-msg">All non-conformance reports are closed. Switch to All to view history.</p>
+                                    </div>
+                                </template>
+                            </template>
+
+                            <template if:false={hasNcrData}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:non_profit" size="large" alternative-text="No NCRs"></lightning-icon>
+                                    <h3 class="empty-title">No NCRs yet</h3>
+                                    <p class="empty-msg">Log non-conformance reports to track quality issues on site.</p>
+                                    <lightning-button label="New NCR" variant="destructive-text" icon-name="utility:add" onclick={handleNewNCR} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Work Fronts -->
+                    <lightning-tab label="Work Fronts" value="fronts" icon-name="standard:location">
+                        <div class="slds-grid slds-gutters slds-wrap slds-p-top_small">
+                            <template for:each={workFronts} for:item="wf">
+                                <div key={wf.Id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-m-bottom_small">
+                                    <div class={wf.statusClass} data-id={wf.Id} onclick={handleFrontClick}>
+                                        <div class="slds-grid slds-grid_align-spread slds-m-bottom_xx-small">
+                                            <strong class="slds-truncate front-name" title={wf.Name}>{wf.Name}</strong>
+                                            <span class={wf.statusBadge}>{wf.Readiness_Status__c}</span>
+                                        </div>
+                                        <p class="front-meta">WP: {wf.wpName}</p>
+                                        <template if:true={wf.Blockers__c}>
+                                            <p class="front-blocker">⚠ {wf.Blockers__c}</p>
+                                        </template>
+                                        <template if:true={wf.Released_Date__c}>
+                                            <p class="front-meta">Released: <lightning-formatted-date-time value={wf.Released_Date__c}></lightning-formatted-date-time></p>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                            <template if:false={hasWorkFrontData}>
+                                <div class="empty-state slds-col">
+                                    <lightning-icon icon-name="standard:location" size="large" alternative-text="No work fronts"></lightning-icon>
+                                    <h3 class="empty-title">No work fronts yet</h3>
+                                    <p class="empty-msg">Create work fronts to manage site readiness and release status.</p>
+                                    <lightning-button label="New Work Front" variant="neutral" icon-name="utility:add" onclick={handleNewWorkFront} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Recent Progress -->
+                    <lightning-tab label="Daily Progress" value="progress" icon-name="standard:dashboard">
+                        <div class="slds-p-top_small">
+                            <template if:true={hasDprData}>
+                                <div class="count-label slds-m-bottom_x-small">{dprCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={recentProgress}
+                                        columns={dprColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleDprAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasDprData}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:dashboard" size="large" alternative-text="No progress"></lightning-icon>
+                                    <h3 class="empty-title">No progress records yet</h3>
+                                    <p class="empty-msg">Capture daily progress to track quantities, hours, and safety on site.</p>
+                                    <lightning-button label="New DPR" variant="brand" icon-name="utility:add" onclick={handleNewDPR} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                </lightning-tabset>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: FSL Work Type Analysis Analytics Who: FSL Team</description>
+    <flexiPage>SDO_SFS_App_Work_Type_Analysis</flexiPage>
+    <label>Work Type Analysis</label>
+    <motif>Custom19: Wrench</motif>
+</CustomTab>

@@ -1,0 +1,69 @@
+:host { display: block; width: 100%; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.table-count {
+    font-size: 0.75rem;
+    color: #706e6b;
+    margin-bottom: 0.25rem;
+}
+
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #1589ee;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 100px;
+}
+.kpi-card.kpi-open     { border-left-color: #0070d2; background: #f0f6ff; }
+.kpi-card.kpi-answered { border-left-color: #027e46; background: #f0faf5; }
+.kpi-card.kpi-overdue  { border-left-color: #c23934; background: #fdf3f2; }
+.kpi-card.kpi-closed   { border-left-color: #706e6b; background: #f8f8f8; }
+.kpi-label {
+    font-size: 0.7rem;
+    color: #706e6b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kpi-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #032d60;
+    margin-top: 2px;
+}
+
+.filter-btn { margin-right: 4px; }
+
+/* Status cell colours */
+.rfi-status-open     { font-weight: 600; color: #0070d2; }
+.rfi-status-review   { font-weight: 600; color: #ff9e2c; }
+.rfi-status-answered { font-weight: 600; color: #027e46; }
+.rfi-status-closed   { color: #aeaeae; }
+.rfi-status-draft    { color: #706e6b; }
+
+/* Priority cell colours */
+.rfi-priority-high   { font-weight: 700; color: #c23934; }
+.rfi-priority-medium { font-weight: 600; color: #ff9e2c; }
+.rfi-priority-low    { color: #706e6b; }
+
+/* Overdue highlight */
+.rfi-overdue { color: #c23934; font-weight: 700; }
+
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #706e6b;
+}
+.empty-state-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #3e3e3c;
+    margin-top: 0.5rem;
+}
+.empty-state-hint {
+    font-size: 0.8125rem;
+    color: #aeaeae;
+    margin-top: 0.25rem;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>WBS Builder Admin</label>
+    <description>Full access to WBS builder objects/fields (CPM, dependencies, templates, delay engine).</description>
+    <hasActivationRequired>false</hasActivationRequired>
+
+    <objectPermissions><object>WBS_Dependency__c</object><allowRead>true</allowRead><allowCreate>true</allowCreate><allowEdit>true</allowEdit><allowDelete>true</allowDelete><viewAllRecords>true</viewAllRecords><modifyAllRecords>true</modifyAllRecords></objectPermissions>
+    <objectPermissions><object>WBS_Template__c</object><allowRead>true</allowRead><allowCreate>true</allowCreate><allowEdit>true</allowEdit><allowDelete>true</allowDelete><viewAllRecords>true</viewAllRecords><modifyAllRecords>true</modifyAllRecords></objectPermissions>
+    <objectPermissions><object>WBS_Template_Item__c</object><allowRead>true</allowRead><allowCreate>true</allowCreate><allowEdit>true</allowEdit><allowDelete>true</allowDelete><viewAllRecords>true</viewAllRecords><modifyAllRecords>true</modifyAllRecords></objectPermissions>
+
+    <fieldPermissions><field>WBS_Item__c.Name__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Early_Start__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Early_Finish__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Late_Start__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Late_Finish__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Float_Days__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Actual_Start__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Actual_Finish__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Custodian__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Assignee__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Delay_Risk_Score__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Delay_Likelihood__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Likely_To_Delay_Project__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Is_Actual_Start_Crossed__c</field><readable>true</readable><editable>false</editable></fieldPermissions>
+
+    <fieldPermissions><field>WBS_Dependency__c.Dependency_Type__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Dependency__c.Lag_Days__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+
+    <fieldPermissions><field>Daily_Progress__c.Percent_Complete_Day__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+
+    <fieldPermissions><field>WBS_Template__c.Description__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template__c.Is_Active__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template__c.Project_Type__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template__c.Industry__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+
+    <fieldPermissions><field>WBS_Template_Item__c.Parent_Template_Item__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Code__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Level__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Sequence__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Typical_Duration_Days__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Budget_Percentage__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Control_Account__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Discipline__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Predecessor_Code__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Dependency_Type__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Template_Item__c.Lag_Days__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
+</PermissionSet>

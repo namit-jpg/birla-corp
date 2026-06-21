@@ -1,0 +1,89 @@
+<template>
+    <lightning-card icon-name="utility:chart">
+        <span slot="title">Schedule Variance Summary</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label={toggleLabel} variant="neutral" onclick={handleToggleTable}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <!-- Loading -->
+            <template lwc:if={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_medium">
+                    <lightning-spinner alternative-text="Loading schedule metrics..." size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- Error -->
+            <template lwc:if={errorMessage}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert">
+                    <lightning-icon icon-name="utility:error" size="x-small" class="slds-m-right_x-small" alternative-text="Error"></lightning-icon>
+                    <span>{errorMessage}</span>
+                </div>
+            </template>
+
+            <!-- Empty -->
+            <template lwc:if={isEmpty}>
+                <div class="empty-state">
+                    <lightning-icon icon-name="utility:chart" size="small" alternative-text="No WBS items"></lightning-icon>
+                    <p class="empty-state-title">No WBS items found</p>
+                    <p class="empty-state-hint">Schedule variance metrics will appear once WBS items are added.</p>
+                </div>
+            </template>
+
+            <!-- Metrics grid -->
+            <template lwc:if={hasData}>
+                <div class="slds-grid slds-gutters_xx-small slds-wrap slds-m-bottom_medium">
+                    <div class="slds-col slds-size_1-of-5">
+                        <div class="metric-card slds-text-align_center">
+                            <div class="metric-label">Total Items</div>
+                            <div class="metric-value">{totalCount}</div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-5">
+                        <div class="metric-card slds-text-align_center">
+                            <div class="metric-label">On Time</div>
+                            <div class={onTimeClass}>{onTimeCount} <span class="metric-pct">({onTimePct}%)</span></div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-5">
+                        <div class="metric-card slds-text-align_center">
+                            <div class="metric-label">Delayed</div>
+                            <div class={delayedClass}>{delayedCount} <span class="metric-pct">({delayedPct}%)</span></div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-5">
+                        <div class="metric-card slds-text-align_center">
+                            <div class="metric-label">Critical Path</div>
+                            <div class="metric-value metric-value--critical">{criticalCount}</div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-5">
+                        <div class="metric-card slds-text-align_center">
+                            <div class="metric-label">Avg Variance</div>
+                            <div class={varianceClass}>{avgVariance}d</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail table -->
+                <template if:true={showTable}>
+                    <p class="table-count slds-m-bottom_x-small">{countLabelText}</p>
+                    <div class="epc-datatable-wrap">
+                        <lightning-datatable
+                            key-field="Id"
+                            data={_items}
+                            columns={columns}
+                            hide-checkbox-column
+                            column-widths-mode="auto"
+                            min-column-width="80"
+                            onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                    </div>
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>EPC_Work_Package_Kanban</defaultLandingTab>
+    <description>EPC execution consoles — 16 role-based dashboards for site, quality, HSE, procurement, and close-out.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>EPC Execution</label>
+    <navType>Standard</navType>
+    <tabs>EPC_Work_Package_Kanban</tabs>
+    <tabs>EPC_HSE_Hub</tabs>
+    <tabs>EPC_Safety_Dashboard</tabs>
+    <tabs>EPC_Permit_Planner</tabs>
+    <tabs>EPC_Equipment_Utilisation</tabs>
+    <tabs>EPC_Site_Execution_Board</tabs>
+    <tabs>EPC_Quality_Hub</tabs>
+    <tabs>EPC_Quality_Dashboard</tabs>
+    <tabs>EPC_Procurement_Console</tabs>
+    <tabs>EPC_Daily_Progress_Capture</tabs>
+    <tabs>EPC_RFI_Console</tabs>
+    <tabs>EPC_Drawing_Register</tabs>
+    <tabs>EPC_Commissioning_Tracker</tabs>
+    <tabs>EPC_Handover_Builder</tabs>
+    <tabs>EPC_Gantt_Chart</tabs>
+    <tabs>EPC_Schedule_Variance</tabs>
+    <tabs>Project__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

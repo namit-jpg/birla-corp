@@ -1,0 +1,81 @@
+[97m{[39m
+  [94m"status"[39m: [34m0[39m[32m,[39m
+  [94m"result"[39m: [97m{[39m
+    [94m"checkOnly"[39m: [91mfalse[39m[32m,[39m
+    [94m"completedDate"[39m: [92m"2026-06-15T05:28:59.000Z"[39m[32m,[39m
+    [94m"createdBy"[39m: [92m"005Hs00000IyNJx"[39m[32m,[39m
+    [94m"createdByName"[39m: [92m"Namit Dasappanavar"[39m[32m,[39m
+    [94m"createdDate"[39m: [92m"2026-06-15T05:28:55.000Z"[39m[32m,[39m
+    [94m"details"[39m: [97m{[39m
+      [94m"componentSuccesses"[39m: [97m[[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"ApexClass"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:28:56.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"classes/ConstructionBoardController.cls"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"ConstructionBoardController"[39m[32m,[39m
+          [94m"id"[39m: [92m"01pHs00000eg1kpIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m""[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:28:57.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"package.xml"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"package.xml"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m
+      [97m][39m[32m,[39m
+      [94m"runTestResult"[39m: [97m{[39m
+        [94m"numFailures"[39m: [34m0[39m[32m,[39m
+        [94m"numTestsRun"[39m: [34m0[39m[32m,[39m
+        [94m"totalTime"[39m: [34m0[39m[32m,[39m
+        [94m"codeCoverage"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"codeCoverageWarnings"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"failures"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"flowCoverage"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"flowCoverageWarnings"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"successes"[39m: [97m[[39m[97m][39m
+      [97m}[39m[32m,[39m
+      [94m"componentFailures"[39m: [97m[[39m[97m][39m
+    [97m}[39m[32m,[39m
+    [94m"done"[39m: [91mtrue[39m[32m,[39m
+    [94m"id"[39m: [92m"0AfHs00002zVyLVKA0"[39m[32m,[39m
+    [94m"ignoreWarnings"[39m: [91mfalse[39m[32m,[39m
+    [94m"lastModifiedDate"[39m: [92m"2026-06-15T05:28:59.000Z"[39m[32m,[39m
+    [94m"numberComponentErrors"[39m: [34m0[39m[32m,[39m
+    [94m"numberComponentsDeployed"[39m: [34m1[39m[32m,[39m
+    [94m"numberComponentsTotal"[39m: [34m1[39m[32m,[39m
+    [94m"numberFiles"[39m: [92m"4"[39m[32m,[39m
+    [94m"numberTestErrors"[39m: [34m0[39m[32m,[39m
+    [94m"numberTestsCompleted"[39m: [34m0[39m[32m,[39m
+    [94m"numberTestsTotal"[39m: [34m0[39m[32m,[39m
+    [94m"rollbackOnError"[39m: [91mtrue[39m[32m,[39m
+    [94m"runTestsEnabled"[39m: [91mfalse[39m[32m,[39m
+    [94m"startDate"[39m: [92m"2026-06-15T05:28:55.000Z"[39m[32m,[39m
+    [94m"status"[39m: [92m"Succeeded"[39m[32m,[39m
+    [94m"success"[39m: [91mtrue[39m[32m,[39m
+    [94m"zipSize"[39m: [34m1645[39m[32m,[39m
+    [94m"files"[39m: [97m[[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"ConstructionBoardController"[39m[32m,[39m
+        [94m"type"[39m: [92m"ApexClass"[39m[32m,[39m
+        [94m"state"[39m: [92m"Changed"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\classes\\ConstructionBoardController.cls"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"ConstructionBoardController"[39m[32m,[39m
+        [94m"type"[39m: [92m"ApexClass"[39m[32m,[39m
+        [94m"state"[39m: [92m"Changed"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\classes\\ConstructionBoardController.cls-meta.xml"[39m
+      [97m}[39m
+    [97m][39m[32m,[39m
+    [94m"zipFileCount"[39m: [34m3[39m[32m,[39m
+    [94m"deployUrl"[39m: [92m"https://wa1781153253533.my.salesforce.com/lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfHs00002zVyLVKA0%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"[39m
+  [97m}[39m[32m,[39m
+  [94m"warnings"[39m: [97m[[39m[97m][39m
+[97m}[39m

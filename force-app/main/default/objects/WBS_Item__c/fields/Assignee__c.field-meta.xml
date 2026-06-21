@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assignee__c</fullName>
+    <label>Assignee</label>
+    <description>Person executing this item; the successor's assignee is alerted when a predecessor delay shifts them.</description>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>WBS Items (Assignee)</relationshipLabel>
+    <relationshipName>WBS_Items_Assignee</relationshipName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

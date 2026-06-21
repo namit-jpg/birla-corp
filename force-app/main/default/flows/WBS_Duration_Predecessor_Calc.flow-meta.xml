@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Duration_And_Start</name>
+        <label>Duration and Start Populated?</label>
+        <locationX>176</locationX>
+        <locationY>120</locationY>
+        <defaultConnectorLabel>No — Skip</defaultConnectorLabel>
+        <rules>
+            <name>Duration_And_Start_Set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Duration__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Current_Start__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Duration__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Current_Finish</targetReference>
+            </connector>
+            <label>Yes — Compute Finish</label>
+        </rules>
+    </decisions>
+    <description>Before-save record-triggered flow on WBS_Item__c. When Duration__c and Current_Start__c are both populated, computes Current_Finish__c = Current_Start__c + Duration__c (days). Runs on insert and update when schedule fields change. Predecessor FS offset requires a lookup-based flow extension and is documented as a stretch item.</description>
+    <formulas>
+        <name>Computed_Finish_Date</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.Current_Start__c} + {!$Record.Duration__c}</expression>
+    </formulas>
+    <interviewLabel>WBS Duration Predecessor Calc {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>WBS Duration &amp; Predecessor Calc</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Current_Finish</name>
+        <label>Set Current Finish</label>
+        <locationX>352</locationX>
+        <locationY>240</locationY>
+        <inputAssignments>
+            <field>Current_Finish__c</field>
+            <value>
+                <elementReference>Computed_Finish_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>176</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Duration_And_Start</targetReference>
+        </connector>
+        <object>WBS_Item__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

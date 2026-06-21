@@ -1,0 +1,507 @@
+<template>
+    <lightning-card title="Work Breakdown Structure" icon-name="utility:hierarchy">
+        <div slot="actions">
+            <lightning-button
+                label="Add Root Item"
+                icon-name="utility:add"
+                onclick={handleAddRoot}
+                variant="neutral"
+                class="slds-m-right_x-small">
+            </lightning-button>
+            <lightning-button
+                label="Templates"
+                icon-name="utility:template"
+                onclick={handleOpenTemplates}
+                variant="neutral"
+                class="slds-m-right_x-small">
+            </lightning-button>
+            <lightning-button
+                label="Run CPM"
+                icon-name="utility:apex"
+                onclick={handleRunCPM}
+                variant="neutral"
+                disabled={isCpmRunning}>
+            </lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template lwc:if={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading WBS" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:if={hasError}>
+                <div class="slds-notify slds-notify_alert slds-alert_error slds-m-vertical_small" role="alert">
+                    <span class="slds-assistive-text">Error</span>
+                    <p>{errorMessage}</p>
+                </div>
+            </template>
+
+            <template lwc:if={hasData}>
+                <div class="wbs-table">
+                    <!-- header -->
+                    <div class="wbs-header">
+                        <div class="wbs-th wbs-col-name" style="text-align:left">WBS Code &amp; Name</div>
+                        <div class="wbs-th wbs-col-pred">Pred.</div>
+                        <div class="wbs-th wbs-col-dur num">Dur.</div>
+                        <div class="wbs-th wbs-col-budget num">Budget</div>
+                        <div class="wbs-th wbs-col-progress th-progress">Progress</div>
+                        <div class="wbs-th wbs-col-start">Planned Start</div>
+                        <div class="wbs-th wbs-col-end">Planned End</div>
+                        <div class="wbs-th wbs-col-start">Actual Start</div>
+                        <div class="wbs-th wbs-col-end">Actual End</div>
+                        <div class="wbs-th wbs-col-float num">Float (d)</div>
+                        <div class="wbs-th wbs-col-actions"></div>
+                    </div>
+
+                    <!-- rows -->
+                    <template for:each={flatRows} for:item="row">
+                        <div key={row.id} class={row.rowClass}>
+
+                            <div class="wbs-td wbs-col-name">
+                                <span class="drag-dots" title="Row handle">&#x22EE;&#x22EE;</span>
+                                <div class="name-inner" style={row.indentStyle}>
+                                    <template lwc:if={row.hasChildren}>
+                                        <button class="toggle-btn" onclick={handleToggle} data-id={row.id} title="Expand / Collapse">
+                                            <lightning-icon icon-name={row.toggleIcon} size="xx-small" alternative-text="Toggle"></lightning-icon>
+                                        </button>
+                                    </template>
+                                    <template lwc:else>
+                                        <span class="toggle-placeholder"></span>
+                                    </template>
+                                    <span class={row.codeClass}>{row.wbsCode}</span>
+                                    <span class={row.nameClass}
+                                          onclick={handleRowClick}
+                                          data-id={row.id}
+                                          data-label={row.name}
+                                          data-pct={row.progressRaw}
+                                          title="Click to log progress">{row.name}</span>
+                                    <template lwc:if={row.isCritical}>
+                                        <lightning-icon icon-name="utility:warning" size="xx-small" variant="error" class="slds-m-left_xx-small"></lightning-icon>
+                                    </template>
+                                </div>
+                            </div>
+
+                            <div class="wbs-td wbs-col-pred">{row.predSummary}</div>
+                            <div class="wbs-td wbs-col-dur num">{row.durationDays}</div>
+                            <div class="wbs-td wbs-col-budget num">{row.budgetFormatted}</div>
+
+                            <div class="wbs-td wbs-col-progress progress-cell-clickable"
+                                 onclick={handleRowClick}
+                                 data-id={row.id}
+                                 data-label={row.name}
+                                 data-pct={row.progressRaw}
+                                 title="Click to log progress">
+                                <div class="progress-track">
+                                    <div class="progress-fill" style={row.progressFillStyle}></div>
+                                </div>
+                                <span class="progress-pct">{row.progressLabel}</span>
+                            </div>
+
+                            <div class="wbs-td wbs-col-start">{row.startFormatted}</div>
+                            <div class="wbs-td wbs-col-end">{row.endFormatted}</div>
+                            <div class="wbs-td wbs-col-start wbs-actual">{row.actualStartFmt}</div>
+                            <div class="wbs-td wbs-col-end wbs-actual">{row.actualEndFmt}</div>
+                            <div class="wbs-td wbs-col-float num">{row.floatDisplay}</div>
+
+                            <div class="wbs-td wbs-col-actions">
+                                <lightning-button-icon
+                                    icon-name="utility:add"
+                                    title="Add Child"
+                                    alternative-text="Add Child"
+                                    size="xx-small"
+                                    variant="border-filled"
+                                    class="action-btn"
+                                    onclick={handleAddChild}
+                                    data-id={row.id}
+                                    data-label={row.name}>
+                                </lightning-button-icon>
+                                <lightning-button-icon
+                                    icon-name="utility:link"
+                                    title="Manage Predecessors"
+                                    alternative-text="Manage Predecessors"
+                                    size="xx-small"
+                                    variant="border-filled"
+                                    class="action-btn"
+                                    onclick={handleManageDeps}
+                                    data-id={row.id}
+                                    data-label={row.name}>
+                                </lightning-button-icon>
+                                <lightning-button-icon
+                                    icon-name="utility:edit"
+                                    title="Edit"
+                                    alternative-text="Edit"
+                                    size="xx-small"
+                                    variant="border-filled"
+                                    class="action-btn"
+                                    onclick={handleEdit}
+                                    data-id={row.id}
+                                    data-label={row.name}>
+                                </lightning-button-icon>
+                                <lightning-button-icon
+                                    icon-name="utility:delete"
+                                    title="Delete"
+                                    alternative-text="Delete"
+                                    size="xx-small"
+                                    variant="border-filled"
+                                    class="action-btn"
+                                    onclick={handleDelete}
+                                    data-id={row.id}
+                                    data-label={row.name}>
+                                </lightning-button-icon>
+                            </div>
+
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template lwc:if={isEmpty}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <div class="slds-text-align_center">
+                        <lightning-icon icon-name="utility:hierarchy" size="large"></lightning-icon>
+                        <p class="slds-text-heading_small slds-m-top_medium">No WBS items yet</p>
+                        <p class="slds-text-body_regular slds-text-color_weak slds-m-top_x-small">
+                            Add a root item to build your work breakdown structure
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <lightning-button label="Add First Item" variant="brand" onclick={handleAddRoot}></lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+
+    <!-- Add / Edit Modal -->
+    <template lwc:if={showModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true"
+                 class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        alternative-text="Close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"
+                        onclick={closeModal}>
+                    </lightning-button-icon>
+                    <h2 class="slds-modal__title slds-hyphenate">{modalTitle}</h2>
+                </header>
+
+                <lightning-record-edit-form
+                    object-api-name="WBS_Item__c"
+                    record-id={editRecordId}
+                    onsubmit={handleSubmit}
+                    onsuccess={handleSaveSuccess}
+                    onerror={handleSaveError}>
+
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <lightning-messages></lightning-messages>
+                        <div class="slds-grid slds-wrap slds-gutters_small">
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Name__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Code__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Level__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Duration__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Baseline_Start__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Baseline_Finish__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="BAC__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Percent_Complete__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Custodian__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input-field field-name="Assignee__c"></lightning-input-field>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="slds-modal__footer">
+                        <lightning-button label="Cancel" onclick={closeModal}></lightning-button>
+                        <lightning-button
+                            type="submit"
+                            label="Save"
+                            variant="brand"
+                            class="slds-m-left_x-small">
+                        </lightning-button>
+                    </footer>
+                </lightning-record-edit-form>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Log Progress Modal -->
+    <template lwc:if={showProgressModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true"
+                 class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        alternative-text="Close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"
+                        onclick={closeProgressModal}>
+                    </lightning-button-icon>
+                    <h2 class="slds-modal__title slds-hyphenate">Log Progress</h2>
+                    <p class="slds-m-top_xx-small" style="color:rgba(255,255,255,.75);font-size:.8125rem;">{progressItemName}</p>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_large">
+                    <div class="prog-slider-wrap">
+                        <div class="prog-display">{sliderDisplay}%</div>
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            step="1"
+                            class="prog-slider"
+                            value={sliderValue}
+                            oninput={handleSliderInput}>
+                        <div class="prog-slider-labels">
+                            <span>0%</span>
+                            <span>25%</span>
+                            <span>50%</span>
+                            <span>75%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                    <div class="slds-form-element slds-m-top_medium">
+                        <label class="slds-form-element__label" for="prog-exact">Exact %</label>
+                        <div class="slds-form-element__control">
+                            <input
+                                type="number"
+                                id="prog-exact"
+                                min="0"
+                                max="100"
+                                class="slds-input prog-exact-input"
+                                value={sliderValue}
+                                oninput={handleExactInput}>
+                        </div>
+                    </div>
+
+                    <div class="slds-form-element slds-m-top_medium">
+                        <label class="slds-form-element__label" for="prog-notes">Remarks (optional)</label>
+                        <div class="slds-form-element__control">
+                            <textarea
+                                id="prog-notes"
+                                class="slds-textarea"
+                                rows="2"
+                                placeholder="Any notes for this update"
+                                oninput={handleNotesInput}></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Cancel" onclick={closeProgressModal}></lightning-button>
+                    <lightning-button
+                        label="Save Progress"
+                        variant="brand"
+                        class="slds-m-left_x-small"
+                        onclick={handleProgressSave}
+                        disabled={isSavingProgress}>
+                    </lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Templates Modal -->
+    <template lwc:if={showTemplateModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true"
+                 class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        alternative-text="Close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"
+                        onclick={closeTemplateModal}>
+                    </lightning-button-icon>
+                    <h2 class="slds-modal__title slds-hyphenate">WBS Templates</h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-box slds-box_x-small slds-m-bottom_medium">
+                        <p class="slds-text-title_caps slds-m-bottom_x-small">Generate from Template</p>
+                        <lightning-combobox
+                            label="Template"
+                            placeholder="Select a template"
+                            options={templateOptions}
+                            value={selectedTemplateId}
+                            onchange={handleTemplateSelect}>
+                        </lightning-combobox>
+                        <lightning-input
+                            type="date"
+                            label="Anchor Start Date"
+                            value={templateAnchorDate}
+                            onchange={handleAnchorChange}
+                            class="slds-m-top_x-small">
+                        </lightning-input>
+                        <div class="slds-m-top_small slds-text-align_right">
+                            <lightning-button
+                                label="Apply Template"
+                                variant="brand"
+                                onclick={handleApplyTemplate}
+                                disabled={isTemplateBusy}>
+                            </lightning-button>
+                        </div>
+                    </div>
+
+                    <div class="slds-box slds-box_x-small">
+                        <p class="slds-text-title_caps slds-m-bottom_x-small">Save Current WBS as Template</p>
+                        <lightning-input
+                            type="text"
+                            label="New Template Name"
+                            value={newTemplateName}
+                            onchange={handleTemplateNameChange}>
+                        </lightning-input>
+                        <div class="slds-m-top_small slds-text-align_right">
+                            <lightning-button
+                                label="Save as Template"
+                                variant="neutral"
+                                onclick={handleSaveAsTemplate}
+                                disabled={isTemplateBusy}>
+                            </lightning-button>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Close" onclick={closeTemplateModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Manage Predecessors Modal -->
+    <template lwc:if={showDepModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true"
+                 class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        alternative-text="Close"
+                        variant="bare-inverse"
+                        class="slds-modal__close"
+                        onclick={closeDepModal}>
+                    </lightning-button-icon>
+                    <h2 class="slds-modal__title slds-hyphenate">Manage Predecessors</h2>
+                    <p class="slds-m-top_xx-small" style="color:rgba(255,255,255,.75);font-size:.8125rem;">{depWbsItemName}</p>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+
+                    <template lwc:if={isLoadingDeps}>
+                        <div class="slds-align_absolute-center slds-p-around_medium">
+                            <lightning-spinner alternative-text="Loading dependencies" size="small"></lightning-spinner>
+                        </div>
+                    </template>
+
+                    <template lwc:if={hasDependencies}>
+                        <ul class="slds-has-dividers_bottom-space">
+                            <template for:each={dependencies} for:item="dep">
+                                <li key={dep.id} class="slds-item slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-p-vertical_xx-small">
+                                    <div class="slds-truncate">
+                                        <span class="slds-text-body_regular slds-text-title_bold">{dep.predLabel}</span>
+                                        <div class="slds-text-body_small slds-text-color_weak">
+                                            <span>{dep.typeLabel}</span>
+                                            <template lwc:if={dep.lagLabel}>
+                                                <span class="slds-m-left_small">{dep.lagLabel}</span>
+                                            </template>
+                                        </div>
+                                    </div>
+                                    <lightning-button-icon
+                                        icon-name="utility:delete"
+                                        title="Remove"
+                                        alternative-text="Remove"
+                                        size="x-small"
+                                        variant="border-filled"
+                                        onclick={handleDepDelete}
+                                        data-id={dep.id}
+                                        data-label={dep.predLabel}>
+                                    </lightning-button-icon>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+
+                    <template lwc:if={isDependenciesEmpty}>
+                        <p class="slds-text-body_regular slds-text-color_weak slds-p-vertical_x-small">
+                            No predecessors yet. Add one to drive this task's schedule.
+                        </p>
+                    </template>
+
+                    <template lwc:if={showDepForm}>
+                        <div class="slds-box slds-box_x-small slds-m-top_small">
+                            <lightning-record-edit-form
+                                class="dep-edit-form"
+                                object-api-name="WBS_Dependency__c"
+                                onsubmit={handleDepSubmit}
+                                onsuccess={handleDepSaveSuccess}
+                                onerror={handleDepSaveError}>
+                                <lightning-messages></lightning-messages>
+                                <div class="slds-grid slds-wrap slds-gutters_small">
+                                    <div class="slds-col slds-size_1-of-1">
+                                        <lightning-input-field field-name="Predecessor__c" required></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning-input-field field-name="Dependency_Type__c"></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning-input-field field-name="Lag_Days__c"></lightning-input-field>
+                                    </div>
+                                </div>
+                                <div class="slds-m-top_small slds-text-align_right">
+                                    <lightning-button type="submit" label="Add" variant="brand"></lightning-button>
+                                </div>
+                            </lightning-record-edit-form>
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-m-top_small">
+                            <lightning-button
+                                label="Add Predecessor"
+                                icon-name="utility:add"
+                                variant="neutral"
+                                onclick={handleShowDepForm}>
+                            </lightning-button>
+                        </div>
+                    </template>
+
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Close" onclick={closeDepModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

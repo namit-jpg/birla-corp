@@ -1,0 +1,84 @@
+<template>
+    <lightning-card icon-name="standard:work_queue">
+        <span slot="title">RFI Console</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New RFI" icon-name="utility:add" icon-position="left" variant="brand" onclick={handleNewRFI}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- KPI strip -->
+            <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="slds-col kpi-card kpi-open">
+                    <div class="kpi-label">Open / Under Review</div>
+                    <div class="kpi-value">{openCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-answered">
+                    <div class="kpi-label">Answered</div>
+                    <div class="kpi-value">{answeredCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-overdue">
+                    <div class="kpi-label">Overdue</div>
+                    <div class="kpi-value">{overdueCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-closed">
+                    <div class="kpi-label">Closed</div>
+                    <div class="kpi-value">{closedCount}</div>
+                </div>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="slds-button-group slds-m-bottom_small" role="group">
+                <template for:each={filterButtonsWithVariant} for:item="btn">
+                    <lightning-button
+                        key={btn.value}
+                        label={btn.label}
+                        variant={btn.variant}
+                        data-value={btn.value}
+                        onclick={handleFilter}
+                        class="filter-btn">
+                    </lightning-button>
+                </template>
+            </div>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading RFIs..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <p class="table-count">{countLabelText}</p>
+
+                <template if:true={hasFilteredData}>
+                    <div class="epc-datatable-wrap">
+                        <lightning-datatable
+                            key-field="Id"
+                            data={filteredRfis}
+                            columns={columns}
+                            hide-checkbox-column
+                            column-widths-mode="auto"
+                            min-column-width="80"
+                            onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                    </div>
+                </template>
+
+                <template if:false={hasFilteredData}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="utility:inbox" size="small" alternative-text="No RFIs"></lightning-icon>
+                        <p class="empty-state-title">No RFIs match this filter</p>
+                        <p class="empty-state-hint">Try another status filter or create a new RFI.</p>
+                    </div>
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

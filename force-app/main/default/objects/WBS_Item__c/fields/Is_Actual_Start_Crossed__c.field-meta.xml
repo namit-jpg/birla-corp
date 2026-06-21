@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Actual_Start_Crossed__c</fullName>
+    <label>Actual Start Crossed Planned</label>
+    <description>True when the item has not started (0% progress) yet today is past the baseline start date.</description>
+    <formula>AND(OR(ISBLANK(Percent_Complete__c), Percent_Complete__c = 0), NOT(ISBLANK(Baseline_Start__c)), TODAY() &gt; Baseline_Start__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,126 @@
+<template>
+    <lightning-card icon-name="standard:maintenance_plan">
+        <span slot="title">Commissioning Tracker</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New Completion" icon-name="utility:add" icon-position="left" variant="brand" onclick={handleNewCompletion}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading commissioning data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+
+                <!-- KPI strip -->
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col kpi-card">
+                        <div class="kpi-label">Total Completions</div>
+                        <div class="kpi-value">{totalCompletions}</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-ok">
+                        <div class="kpi-label">Signed Off</div>
+                        <div class="kpi-value">{signedOffCount}</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-progress">
+                        <div class="kpi-label">In Progress</div>
+                        <div class="kpi-value">{inProgressCount}</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-info">
+                        <div class="kpi-label">Procedures</div>
+                        <div class="kpi-value">{totalProcedures}</div>
+                    </div>
+                </div>
+
+                <!-- Stage progress cards -->
+                <template if:true={stageSummary.length}>
+                    <h3 class="slds-text-heading_small slds-m-bottom_x-small">Stage Progress</h3>
+                    <div class="slds-grid slds-gutters_x-small slds-wrap slds-m-bottom_medium">
+                        <template for:each={stageSummary} for:item="stage">
+                            <div key={stage.name} class="slds-col slds-size_1-of-4 slds-m-bottom_x-small">
+                                <div class={stage.cardClass}>
+                                    <div class="stage-name">{stage.name}</div>
+                                    <div class="stage-pct">{stage.pct}%</div>
+                                    <div class="stage-sub">{stage.complete} / {stage.total}</div>
+                                    <lightning-progress-bar value={stage.pct} size="x-small"></lightning-progress-bar>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+                <!-- Stage filter buttons -->
+                <div class="filter-row slds-m-bottom_small">
+                    <span class="filter-label">Stage:</span>
+                    <template for:each={stageFilterButtons} for:item="btn">
+                        <button key={btn.value} class={btn.cls} data-value={btn.value} onclick={handleStageFilter}>{btn.label}</button>
+                    </template>
+                </div>
+
+                <lightning-tabset>
+                    <lightning-tab label="Completion Stages" value="completions">
+                        <div class="slds-p-top_small">
+                            <p class="table-count">{completionCountLabel}</p>
+                            <template if:true={hasFilteredCompletions}>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={filteredCompletions}
+                                        columns={completionColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasFilteredCompletions}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="utility:checkin" size="small" alternative-text="No completions"></lightning-icon>
+                                    <p class="empty-state-title">No completion records match the current filter</p>
+                                    <p class="empty-state-hint">Try another stage filter or add a new completion record.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <lightning-tab label="Procedures" value="procedures">
+                        <div class="slds-p-top_small">
+                            <p class="table-count">{procedureCountLabel}</p>
+                            <template if:true={hasProcedures}>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={procedures}
+                                        columns={procedureColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasProcedures}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="utility:steps" size="small" alternative-text="No procedures"></lightning-icon>
+                                    <p class="empty-state-title">No commissioning procedures found</p>
+                                    <p class="empty-state-hint">Procedures will appear here once they are created for this project.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+                </lightning-tabset>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

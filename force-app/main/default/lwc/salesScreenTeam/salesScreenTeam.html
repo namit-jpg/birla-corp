@@ -1,0 +1,363 @@
+<template>
+    <div class="slds-card component-container">
+        <!-- Step Progress Bar -->
+        <div class="slds-card__header">
+            <div class="slds-grid slds-grid_align-spread step-progress">
+                <template for:each={steps} for:item="step" for:index="index">
+                    <div key={step} class="slds-grid slds-grid_vertical-align-center">
+                        <div class={getStepClass} data-step={index} onclick={handleStepClick}>
+                            <div class="slds-text-heading_small">Step {index}</div>
+                            <div class="slds-text-body_small">{step}</div>
+                        </div>
+                        <template if:false={isLastIndex}>
+                            <div class="slds-m-horizontal_medium slds-text-color_weak step-arrow">→</div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- Step Content -->
+        <div class="slds-card__body slds-card__body_inner step-content">
+            <!-- Step 1: OEM / Inquirer Details -->
+            <template if:true={isStep1}>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-input 
+                                label="OEM Company Name" 
+                                value={opportunityData.oemCompanyName}
+                                data-field="oemCompanyName"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                        <div class="input-container">
+                            <lightning-input 
+                                label="Contact Person Name" 
+                                value={opportunityData.contactPersonName}
+                                data-field="contactPersonName"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                        <div class="input-container">
+                            <lightning-input 
+                                label="Contact Email" 
+                                type="email"
+                                value={opportunityData.contactEmail}
+                                data-field="contactEmail"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                        <div class="input-container">
+                            <lightning-input 
+                                label="OEM Website" 
+                                type="url"
+                                value={opportunityData.oemWebsite}
+                                data-field="oemWebsite"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-input 
+                                label="Contact Phone Number" 
+                                type="tel"
+                                value={opportunityData.contactPhoneNumber}
+                                data-field="contactPhoneNumber"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                        <div class="input-container">
+                            <lightning-input 
+                                label="Contact Person Role/Title" 
+                                value={opportunityData.contactPersonRole}
+                                data-field="contactPersonRole"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="OEM Industry Segment"
+                                value={opportunityData.oemIndustrySegment}
+                                options={industryOptions}
+                                data-field="oemIndustrySegment"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Step 2: Requirement Overview -->
+            <template if:true={isStep2}>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-dual-listbox
+                                label="Product of Interest"
+                                source-label="Available Products"
+                                selected-label="Selected Products"
+                                options={productOptions}
+                                value={selectedProducts}
+                                onchange={handleProductSelection}
+                                class="enhanced-input">
+                            </lightning-dual-listbox>
+                        </div>
+                        
+                        <!-- Selected Products Display -->
+                        <template if:true={hasSelectedProducts}>
+                            <div class="selected-products-container slds-m-top_medium">
+                                <label class="slds-form-element__label slds-text-body_small">Selected Products:</label>
+                                <div class="slds-grid slds-gutters slds-wrap slds-m-top_small">
+                                    <template for:each={selectedProductsForDisplay} for:item="product">
+                                        <div key={product.name} class="slds-col">
+                                            <span class="slds-badge slds-badge_lightest selected-product-badge">
+                                                {product.name}
+                                            </span>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-textarea 
+                                label="Brief Description of Requirement"
+                                value={opportunityData.briefDescription}
+                                data-field="briefDescription"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details Cards -->
+                <template if:true={hasSelectedProducts}>
+                    <div class="slds-m-top_large">
+                        <h3 class="slds-text-heading_medium slds-m-bottom_medium">Product Details</h3>
+                        <div class="product-cards-container slds-scrollable_x">
+                            <div class="slds-grid slds-gutters slds-nowrap">
+                                <template for:each={productDetailsArray} for:item="productItem">
+                                    <div key={productItem.name} class="slds-col slds-size_1-of-3 slds-min-width_280">
+                                        <div class="slds-card product-detail-card">
+                                            <div class="slds-card__header">
+                                                <h4 class="slds-card__header-title slds-text-heading_small">
+                                                    {productItem.name}
+                                                    <span class="slds-badge slds-badge_outline slds-m-left_small">Selected</span>
+                                                </h4>
+                                            </div>
+                                            <div class="slds-card__body slds-card__body_inner">
+                                                <div class="input-container">
+                                                    <lightning-input 
+                                                        label="Power (kW)"
+                                                        type="number"
+                                                        value={productItem.details.powerKw}
+                                                        data-product={productItem.name}
+                                                        data-field="powerKw"
+                                                        onchange={handleProductDetailChange}
+                                                        class="enhanced-input">
+                                                    </lightning-input>
+                                                </div>
+                                                <div class="input-container">
+                                                    <lightning-input 
+                                                        label="Initial Order Quantity"
+                                                        type="number"
+                                                        value={productItem.details.initialOrderQuantity}
+                                                        data-product={productItem.name}
+                                                        data-field="initialOrderQuantity"
+                                                        onchange={handleProductDetailChange}
+                                                        class="enhanced-input">
+                                                    </lightning-input>
+                                                </div>
+                                                <div class="input-container">
+                                                    <lightning-input 
+                                                        label="Estimated Annual Quantity"
+                                                        type="number"
+                                                        value={productItem.details.estimatedAnnualQuantity}
+                                                        data-product={productItem.name}
+                                                        data-field="estimatedAnnualQuantity"
+                                                        onchange={handleProductDetailChange}
+                                                        class="enhanced-input">
+                                                    </lightning-input>
+                                                </div>
+                                                <div class="input-container">
+                                                    <lightning-input 
+                                                        label="Target Price/Budget"
+                                                        value={productItem.details.targetPriceBudget}
+                                                        data-product={productItem.name}
+                                                        data-field="targetPriceBudget"
+                                                        onchange={handleProductDetailChange}
+                                                        class="enhanced-input">
+                                                    </lightning-input>
+                                                </div>
+                                                <div class="input-container">
+                                                    <lightning-combobox 
+                                                        label="Drawings/Specifications Available?"
+                                                        value={productItem.details.areDrawingsPreliminary}
+                                                        options={drawingsOptions}
+                                                        data-product={productItem.name}
+                                                        data-field="areDrawingsPreliminary"
+                                                        onchange={handleProductDetailChange}
+                                                        class="enhanced-input">
+                                                    </lightning-combobox>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+
+            <!-- Step 3: Commercial & Logistical Information -->
+            <template if:true={isStep3}>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="Delivery Type"
+                                value={opportunityData.deliveryType}
+                                options={deliveryOptions}
+                                data-field="deliveryType"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="Installation Country"
+                                value={opportunityData.installationCountry}
+                                options={countryOptions}
+                                data-field="installationCountry"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-input 
+                                label="Target First Delivery Date" 
+                                type="date"
+                                value={opportunityData.targetFirstDeliveryDate}
+                                data-field="targetFirstDeliveryDate"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="Currency for Quotation"
+                                value={opportunityData.currencyForQuotation}
+                                options={currencyOptions}
+                                data-field="currencyForQuotation"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Step 4: Qualification & Next Steps -->
+            <template if:true={isStep4}>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="Lead Source"
+                                value={opportunityData.leadSource}
+                                options={leadSourceOptions}
+                                data-field="leadSource"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="Urgency Level"
+                                value={opportunityData.urgencyLevel}
+                                options={urgencyOptions}
+                                data-field="urgencyLevel"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                        <div class="input-container">
+                            <lightning-combobox 
+                                label="Next Action"
+                                value={opportunityData.nextAction}
+                                options={nextActionOptions}
+                                data-field="nextAction"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="input-container">
+                            <lightning-textarea 
+                                label="Salesperson Assessment Notes"
+                                value={opportunityData.salespersonAssessmentNotes}
+                                data-field="salespersonAssessmentNotes"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-textarea>
+                        </div>
+                        <div class="input-container">
+                            <lightning-input 
+                                label="Next Action Date" 
+                                type="date"
+                                value={opportunityData.nextActionDate}
+                                data-field="nextActionDate"
+                                onchange={handleInputChange}
+                                class="enhanced-input">
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="slds-card__footer">
+            <div class="slds-grid slds-grid_align-spread">
+                <lightning-button 
+                    variant="neutral" 
+                    label="Previous" 
+                    onclick={handlePrevious}
+                    disabled={isFirstStep}
+                    class="nav-button">
+                </lightning-button>
+                <template if:true={isLastStep}>
+                    <lightning-button
+                        variant="brand"
+                        label="Final Save"
+                        onclick={handleSave}
+                        class="nav-button save-button">
+                    </lightning-button>
+                </template>
+                <template if:false={isLastStep}>
+                    <lightning-button 
+                        variant="brand" 
+                        label="Next" 
+                        onclick={handleNext}
+                        class="nav-button">
+                    </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

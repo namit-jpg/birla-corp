@@ -1,0 +1,316 @@
+<template>
+    <lightning-card icon-name="standard:incident">
+        <span slot="title">HSE Hub</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New Permit"   icon-name="utility:add" icon-position="left" variant="neutral" onclick={handleNewPermit}   class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New Obs"      icon-name="utility:add" icon-position="left" variant="neutral" onclick={handleNewObs}      class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New Incident" icon-name="utility:add" icon-position="left" variant="brand"   onclick={handleNewIncident}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- KPI strip -->
+            <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="slds-col kpi-card kpi-neutral">
+                    <div class="kpi-label">Active Permits</div>
+                    <div class="kpi-value">{activePermits}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-danger">
+                    <div class="kpi-label">High-Risk Open</div>
+                    <div class="kpi-value">{highRiskObs}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warn">
+                    <div class="kpi-label">Open Incidents</div>
+                    <div class="kpi-value">{openIncidents}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warn">
+                    <div class="kpi-label">Near Misses</div>
+                    <div class="kpi-value">{nearMisses}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-ok">
+                    <div class="kpi-label">TBT Attendees</div>
+                    <div class="kpi-value">{tbtAttendees}</div>
+                </div>
+            </div>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading HSE data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <lightning-tabset>
+                    <!-- Permits -->
+                    <lightning-tab label={permitsTabLabel} value="permits">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={sortedPermits.length}>
+                                <div class="count-label">{permitCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={sortedPermits}
+                                        columns={permitColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={sortedPermits.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:work_order" size="large" alternative-text="No permits"></lightning-icon>
+                                    <h3 class="empty-title">No permits found</h3>
+                                    <p class="empty-msg">Create a permit to work to authorize hazardous site activities.</p>
+                                    <lightning-button label="New Permit" variant="brand" icon-name="utility:add" onclick={handleNewPermit} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Observations -->
+                    <lightning-tab label="Observations" value="obs">
+                        <div class="slds-p-top_small tab-panel">
+                            <div class="slds-button-group slds-m-bottom_small" role="group">
+                                <template for:each={obsRiskButtons} for:item="btn">
+                                    <lightning-button key={btn.value} label={btn.label} variant={btn.variant} data-value={btn.value} onclick={handleObsFilter} class="filter-btn"></lightning-button>
+                                </template>
+                            </div>
+                            <template if:true={filteredObs.length}>
+                                <div class="count-label">{obsCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={filteredObs}
+                                        columns={obsColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={filteredObs.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:observation" size="large" alternative-text="No observations"></lightning-icon>
+                                    <h3 class="empty-title">No observations found</h3>
+                                    <p class="empty-msg">Log safety observations to track hazards and corrective actions.</p>
+                                    <lightning-button label="New Observation" variant="brand" icon-name="utility:add" onclick={handleNewObs} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Incidents -->
+                    <lightning-tab label="Incidents" value="incidents">
+                        <div class="slds-p-top_small tab-panel">
+                            <div class="slds-button-group slds-m-bottom_small" role="group">
+                                <template for:each={incSevButtons} for:item="btn">
+                                    <lightning-button key={btn.value} label={btn.label} variant={btn.variant} data-value={btn.value} onclick={handleIncFilter} class="filter-btn"></lightning-button>
+                                </template>
+                            </div>
+                            <template if:true={filteredInc.length}>
+                                <div class="count-label">{incidentCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={filteredInc}
+                                        columns={incidentColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={filteredInc.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:incident" size="large" alternative-text="No incidents"></lightning-icon>
+                                    <h3 class="empty-title">No incidents found</h3>
+                                    <p class="empty-msg">Report incidents to ensure proper investigation and follow-up.</p>
+                                    <lightning-button label="New Incident" variant="brand" icon-name="utility:add" onclick={handleNewIncident} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Toolbox Talks -->
+                    <lightning-tab label="Toolbox Talks" value="tbt">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={toolboxTalks.length}>
+                                <div class="count-label">{tbtCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={toolboxTalks}
+                                        columns={tbtColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={toolboxTalks.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:groups" size="large" alternative-text="No toolbox talks"></lightning-icon>
+                                    <h3 class="empty-title">No toolbox talks found</h3>
+                                    <p class="empty-msg">Record toolbox talks to track safety briefings and attendance.</p>
+                                    <lightning-button label="New Toolbox Talk" variant="brand" icon-name="utility:add" onclick={handleNewTbt} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- HIRA -->
+                    <lightning-tab label="HIRA" value="hira">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={hiras.length}>
+                                <div class="count-label">{hiraCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={hiras}
+                                        columns={hiraColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hiras.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:risk" size="large" alternative-text="No HIRA records"></lightning-icon>
+                                    <h3 class="empty-title">No HIRA records found</h3>
+                                    <p class="empty-msg">Document hazard identification and risk assessments for site activities.</p>
+                                    <lightning-button label="New HIRA" variant="brand" icon-name="utility:add" onclick={handleNewHira} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Safety Audits -->
+                    <lightning-tab label="Safety Audits" value="audits">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={safetyAudits.length}>
+                                <div class="count-label">{auditCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={safetyAudits}
+                                        columns={auditColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={safetyAudits.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:task" size="large" alternative-text="No safety audits"></lightning-icon>
+                                    <h3 class="empty-title">No safety audits found</h3>
+                                    <p class="empty-msg">Schedule and track safety audit scores and findings.</p>
+                                    <lightning-button label="New Safety Audit" variant="brand" icon-name="utility:add" onclick={handleNewAudit} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Audit Findings -->
+                    <lightning-tab label="Audit Findings" value="findings">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={auditFindings.length}>
+                                <div class="count-label">{findingCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={auditFindings}
+                                        columns={findingColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={auditFindings.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:case" size="large" alternative-text="No audit findings"></lightning-icon>
+                                    <h3 class="empty-title">No audit findings found</h3>
+                                    <p class="empty-msg">Log findings from safety audits and track closure status.</p>
+                                    <lightning-button label="New Finding" variant="brand" icon-name="utility:add" onclick={handleNewFinding} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Emergency Plans -->
+                    <lightning-tab label="Emergency Plans" value="emergency">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={emergencyPlans.length}>
+                                <div class="count-label">{emergencyCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={emergencyPlans}
+                                        columns={emergencyColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={emergencyPlans.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:incident" size="large" alternative-text="No emergency plans"></lightning-icon>
+                                    <h3 class="empty-title">No emergency plans found</h3>
+                                    <p class="empty-msg">Maintain emergency response plans and drill schedules.</p>
+                                    <lightning-button label="New Emergency Plan" variant="brand" icon-name="utility:add" onclick={handleNewPlan} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- OHS Compliance -->
+                    <lightning-tab label="OHS Compliance" value="ohs">
+                        <div class="slds-p-top_small tab-panel">
+                            <template if:true={ohsCompliance.length}>
+                                <div class="count-label">{ohsCountLabel}</div>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable
+                                        key-field="Id"
+                                        data={ohsCompliance}
+                                        columns={ohsColumns}
+                                        hide-checkbox-column
+                                        column-widths-mode="auto"
+                                        min-column-width="80"
+                                        onrowaction={handleRowAction}>
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={ohsCompliance.length}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="standard:endorsement" size="large" alternative-text="No OHS items"></lightning-icon>
+                                    <h3 class="empty-title">No OHS compliance items found</h3>
+                                    <p class="empty-msg">Track regulatory compliance requirements and evidence.</p>
+                                    <lightning-button label="New Compliance Item" variant="brand" icon-name="utility:add" onclick={handleNewOhs} class="slds-m-top_small"></lightning-button>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+                </lightning-tabset>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: EMC Tool built by Hanul Park to simplify setup for everything Einstein Who: Hanul Park</description>
+    <label>EMC²</label>
+    <motif>Custom43: Jewel</motif>
+    <page>SDO_Tool_EMC_App</page>
+</CustomTab>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Predecessor_Code__c</fullName>
+    <label>Predecessor Code(s)</label>
+    <description>Comma-separated WBS code(s) of predecessor template item(s) within this template. Used to recreate dependencies on instantiation.</description>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

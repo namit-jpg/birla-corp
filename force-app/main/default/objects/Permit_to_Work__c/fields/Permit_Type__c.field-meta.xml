@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permit_Type__c</fullName>
+    <label>Permit Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hot Work</fullName>
+                <default>false</default>
+                <label>Hot Work</label>
+            </value>
+            <value>
+                <fullName>Confined Space</fullName>
+                <default>false</default>
+                <label>Confined Space</label>
+            </value>
+            <value>
+                <fullName>Work at Height</fullName>
+                <default>false</default>
+                <label>Work at Height</label>
+            </value>
+            <value>
+                <fullName>Excavation</fullName>
+                <default>false</default>
+                <label>Excavation</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

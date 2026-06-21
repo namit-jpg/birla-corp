@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>SlackChannelService</members>
+        <members>SlackOpportunityChannelService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Order_Create_Slack_Channel</members>
+        <members>Opportunity_Create_Slack_Channel</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Order-Order Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Order.Finance_Task__c</members>
+        <members>Order.Logistics_Task__c</members>
+        <members>Order.QA_Task__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>67.0</version>
+</Package>

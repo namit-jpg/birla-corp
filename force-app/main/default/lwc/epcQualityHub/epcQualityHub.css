@@ -1,0 +1,44 @@
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #706e6b;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 90px;
+}
+.kpi-card.kpi-ok   { border-left-color: #027e46; background: #f0faf5; }
+.kpi-card.kpi-fail { border-left-color: #c23934; background: #fdf3f2; }
+.kpi-card.kpi-warn { border-left-color: #ff9e2c; background: #fffbf0; }
+.kpi-label {
+    font-size: 0.7rem;
+    color: #706e6b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kpi-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #032d60;
+    margin-top: 2px;
+}
+
+.filter-btn { margin-right: 4px; }
+
+/* Cell colour classes */
+.q-ok        { font-weight: 600; color: #027e46; }
+.q-fail      { font-weight: 700; color: #c23934; }
+.q-warn      { font-weight: 600; color: #ff9e2c; }
+.q-pending   { color: #0070d2; }
+.q-draft     { color: #706e6b; }
+.q-active    { font-weight: 600; color: #0070d2; }
+.q-cancelled { color: #aeaeae; text-decoration: line-through; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.empty-state {
+    text-align: center;
+    color: #aeaeae;
+    padding: 2rem;
+    font-size: 0.875rem;
+}

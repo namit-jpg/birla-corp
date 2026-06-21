@@ -1,0 +1,93 @@
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #1589ee;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 100px;
+}
+.kpi-card.kpi-error   { border-left-color: #c23934; background: #fdf3f2; }
+.kpi-card.kpi-warning { border-left-color: #ff9e2c; background: #fffbf0; }
+.kpi-card.kpi-info    { border-left-color: #706e6b; background: #f8f8f8; }
+.kpi-label {
+    font-size: 0.7rem;
+    color: #706e6b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kpi-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #032d60;
+    margin-top: 2px;
+}
+
+/* Status boards */
+.board-panel {
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.board-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.board-mr  .board-header { background: #0070d2; }
+.board-rfq .board-header { background: #4bc076; }
+.board-po  .board-header { background: #ff9e2c; }
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-bottom: 1px solid #f3f2f2;
+    background: #fff;
+}
+.status-row:last-child { border-bottom: none; }
+.status-label {
+    font-size: 0.8rem;
+    color: #3e3e3c;
+}
+
+/* Count badges */
+.count-badge {
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 1px 8px;
+}
+.count-active { background: #0070d2; color: #fff; }
+.count-zero   { background: #f3f2f2; color: #aeaeae; }
+
+/* PO status cell classes */
+.status-draft      { color: #706e6b; }
+.status-issued     { font-weight: 600; color: #0070d2; }
+.status-partial    { font-weight: 600; color: #ff9e2c; }
+.status-received   { font-weight: 600; color: #027e46; }
+.status-closed     { color: #aeaeae; }
+.status-cancelled  { color: #c23934; text-decoration: line-through; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.po-toolbar { flex-wrap: wrap; gap: 0.5rem; }
+
+.empty-state {
+    text-align: center;
+    color: #706e6b;
+    padding: 2.5rem 1.5rem;
+    font-size: 0.875rem;
+    background: #fafaf9;
+    border: 1px dashed #dddbda;
+    border-radius: 4px;
+}

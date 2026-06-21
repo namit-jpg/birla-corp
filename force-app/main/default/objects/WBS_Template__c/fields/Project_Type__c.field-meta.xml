@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Type__c</fullName>
+    <label>Project Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>EPC</fullName><default>true</default><label>EPC</label></value>
+            <value><fullName>EPCM</fullName><default>false</default><label>EPCM</label></value>
+            <value><fullName>Construction</fullName><default>false</default><label>Construction</label></value>
+            <value><fullName>Maintenance</fullName><default>false</default><label>Maintenance</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

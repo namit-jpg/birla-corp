@@ -1,0 +1,245 @@
+<template>
+    <lightning-card icon-name="standard:kanban">
+        <span slot="title" class="slds-text-heading_small">Work Package Kanban</span>
+        <div slot="actions" class="slds-grid slds-grid_align-end slds-gutters_xx-small">
+            <template if:true={isUpdating}>
+                <lightning-spinner alternative-text="Updating status..." size="small" class="slds-m-right_small"></lightning-spinner>
+            </template>
+            <lightning-button-icon
+                icon-name="utility:refresh"
+                alternative-text="Refresh work packages"
+                title="Refresh"
+                onclick={handleRefresh}
+                class="slds-m-right_xx-small">
+            </lightning-button-icon>
+            <lightning-button
+                label="New Work Package"
+                icon-name="utility:add"
+                icon-position="left"
+                variant="brand"
+                onclick={handleNewWP}>
+            </lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={subtitle}>
+                <p class="project-subtitle slds-m-bottom_small">{subtitle}</p>
+            </template>
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert">
+                    <lightning-icon icon-name="utility:error" size="x-small" class="slds-m-right_x-small" alternative-text="Error"></lightning-icon>
+                    <span>{error}</span>
+                </div>
+            </template>
+
+            <!-- KPI strip -->
+            <div class="slds-grid slds-wrap slds-gutters_xx-small slds-m-bottom_medium kpi-strip">
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-6">
+                    <div class="kpi-card kpi-info">
+                        <lightning-icon icon-name="standard:work_order" size="x-small" class="kpi-icon" alternative-text="Total work packages"></lightning-icon>
+                        <div class="kpi-label">Total WPs</div>
+                        <div class="kpi-value">{totalWPs}</div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-6">
+                    <div class="kpi-card kpi-warning">
+                        <lightning-icon icon-name="utility:clock" size="x-small" class="kpi-icon" alternative-text="In progress"></lightning-icon>
+                        <div class="kpi-label">In Progress</div>
+                        <div class="kpi-value">{inProgressCount}</div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-6">
+                    <div class="kpi-card kpi-error">
+                        <lightning-icon icon-name="utility:pause" size="x-small" class="kpi-icon" alternative-text="On hold"></lightning-icon>
+                        <div class="kpi-label">On Hold</div>
+                        <div class="kpi-value">{onHoldCount}</div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-6">
+                    <div class="kpi-card kpi-success">
+                        <lightning-icon icon-name="utility:check" size="x-small" class="kpi-icon" alternative-text="Completed"></lightning-icon>
+                        <div class="kpi-label">Completed</div>
+                        <div class="kpi-value">{completedCount}</div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-6">
+                    <div class="kpi-card kpi-budget">
+                        <lightning-icon icon-name="utility:currency" size="x-small" class="kpi-icon" alternative-text="Total budget"></lightning-icon>
+                        <div class="kpi-label">Total Budget</div>
+                        <div class="kpi-value kpi-value--sm">{totalBudgetDisplay}</div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-6">
+                    <div class="kpi-card kpi-progress">
+                        <div class="kpi-label">Avg Progress {overallPct}%</div>
+                        <div class="progress-bar-bg slds-m-top_xx-small">
+                            <div class="progress-bar-fill" style={overallProgressStyle}></div>
+                        </div>
+                        <template if:true={overdueCount}>
+                            <div class="kpi-sub kpi-sub--danger">{overdueCount} overdue</div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filter-bar slds-grid slds-wrap slds-grid_vertical-align-end slds-gutters_x-small slds-m-bottom_small">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <lightning-input
+                        type="search"
+                        label="Search"
+                        placeholder="Search by name, WBS, or discipline..."
+                        value={searchTerm}
+                        onchange={handleSearchChange}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4">
+                    <lightning-combobox
+                        label="Discipline"
+                        value={disciplineFilter}
+                        options={disciplineOptions}
+                        onchange={handleDisciplineChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <div class="quick-filters">
+                        <span class="filter-label">Quick filter:</span>
+                        <lightning-button label="All" variant={allFilterVariant} data-filter="all" onclick={handleQuickFilter} class="slds-m-left_xx-small"></lightning-button>
+                        <lightning-button label="Active" variant={activeFilterVariant} data-filter="active" onclick={handleQuickFilter} class="slds-m-left_xx-small"></lightning-button>
+                        <lightning-button label="On Hold" variant={holdFilterVariant} data-filter="hold" onclick={handleQuickFilter} class="slds-m-left_xx-small"></lightning-button>
+                        <lightning-button label="Overdue" variant={overdueFilterVariant} data-filter="overdue" onclick={handleQuickFilter} class="slds-m-left_xx-small"></lightning-button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="count-label slds-m-bottom_small">{showCountLabel}</div>
+
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading work packages..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+
+                <!-- Empty: no data at all -->
+                <template if:true={hasNoData}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="standard:kanban" size="large" alternative-text="No work packages"></lightning-icon>
+                        <h3 class="empty-title">No work packages yet</h3>
+                        <p class="empty-msg">Create work packages for this project to manage execution on the Kanban board.</p>
+                        <lightning-button label="Create Work Package" variant="brand" icon-name="utility:add" onclick={handleNewWP} class="slds-m-top_small"></lightning-button>
+                    </div>
+                </template>
+
+                <!-- Empty: filters hide everything -->
+                <template if:true={hasNoMatches}>
+                    <div class="empty-state empty-state--compact">
+                        <lightning-icon icon-name="utility:search" size="medium" alternative-text="No matches"></lightning-icon>
+                        <h3 class="empty-title">No matching work packages</h3>
+                        <p class="empty-msg">Try clearing filters or broadening your search.</p>
+                        <lightning-button label="Clear Filters" variant="neutral" onclick={handleClearFilters} class="slds-m-top_small"></lightning-button>
+                    </div>
+                </template>
+
+                <!-- Kanban board -->
+                <template if:false={hasNoData}>
+                    <template if:false={hasNoMatches}>
+                        <div class="kanban-board" role="region" aria-label="Work package kanban board">
+                            <template for:each={columns} for:item="col">
+                                <div key={col.status} class="kanban-col">
+                                    <div class="col-header" style={col.headerStyle}>
+                                        <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                                            <div class="col-title-wrap">
+                                                <lightning-icon icon-name={col.icon} size="xx-small" class="slds-m-right_xx-small" alternative-text={col.status}></lightning-icon>
+                                                <span class="col-title">{col.status}</span>
+                                            </div>
+                                            <span class="col-count">{col.count}</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class={col.bodyClass}
+                                        data-status={col.status}
+                                        ondragover={handleDragOver}
+                                        ondragleave={handleDragLeave}
+                                        ondrop={handleDrop}>
+                                        <template for:each={col.cards} for:item="wp">
+                                            <div
+                                                key={wp.Id}
+                                                class="kanban-card"
+                                                draggable="true"
+                                                data-id={wp.Id}
+                                                data-status={wp.status}
+                                                ondragstart={handleDragStart}
+                                                ondragend={handleDragEnd}
+                                                onclick={handleCardClick}>
+                                                <div class="card-header-row slds-grid slds-grid_align-spread">
+                                                    <div class="card-title slds-truncate" title={wp.Name}>{wp.Name}</div>
+                                                    <div class="card-actions" onclick={stopPropagation}>
+                                                        <lightning-button-menu
+                                                            alternative-text="Work package actions"
+                                                            icon-size="x-small"
+                                                            menu-alignment="right"
+                                                            data-id={wp.Id}
+                                                            onselect={handleCardMenuSelect}>
+                                                            <lightning-menu-item value="view" label="View"></lightning-menu-item>
+                                                            <lightning-menu-item value="edit" label="Edit"></lightning-menu-item>
+                                                        </lightning-button-menu>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-meta-row slds-m-top_xx-small">
+                                                    <span class="wbs-code">{wp.wbsCode}</span>
+                                                    <template if:true={wp.Discipline__c}>
+                                                        <span class={wp.disciplineClass}>{wp.Discipline__c}</span>
+                                                    </template>
+                                                </div>
+
+                                                <template if:true={wp.isOverdue}>
+                                                    <div class="overdue-badge slds-m-top_xx-small">
+                                                        <lightning-icon icon-name="utility:warning" size="xx-small" alternative-text="Overdue"></lightning-icon>
+                                                        <span>Overdue</span>
+                                                    </div>
+                                                </template>
+
+                                                <div class="slds-m-top_x-small">
+                                                    <div class="card-progress-bg">
+                                                        <div class="card-progress-fill" style={wp.progressFillStyle}></div>
+                                                    </div>
+                                                    <div class="slds-grid slds-grid_align-spread slds-m-top_xx-small">
+                                                        <span class="card-meta">Progress</span>
+                                                        <span class="card-pct">{wp.pctLabel}</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-footer slds-grid slds-grid_align-spread slds-m-top_x-small">
+                                                    <span class={wp.overdueClass}>{wp.startDisplay} → {wp.endDisplay}</span>
+                                                    <span class="card-budget">{wp.budgetDisplay}</span>
+                                                </div>
+                                            </div>
+                                        </template>
+
+                                        <template if:true={col.isEmpty}>
+                                            <div class="empty-col">
+                                                <lightning-icon icon-name="utility:drag_and_drop" size="x-small" alternative-text="Drop here" class="slds-m-bottom_xx-small"></lightning-icon>
+                                                <span>Drop here</span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                        <p class="drag-hint slds-m-top_x-small">
+                            <lightning-icon icon-name="utility:info" size="xx-small" alternative-text="Tip"></lightning-icon>
+                            Drag cards between columns to update status
+                        </p>
+                    </template>
+                </template>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

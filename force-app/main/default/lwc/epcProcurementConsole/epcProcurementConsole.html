@@ -1,0 +1,143 @@
+<template>
+    <lightning-card icon-name="standard:orders">
+        <span slot="title">Procurement Console</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New MR"  icon-name="utility:add" icon-position="left" variant="neutral"  onclick={handleNewMR}  class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New RFQ" icon-name="utility:add" icon-position="left" variant="neutral"  onclick={handleNewRFQ} class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New PO"  icon-name="utility:add" icon-position="left" variant="brand"    onclick={handleNewPO}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- Global KPI strip -->
+            <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="slds-col kpi-card kpi-info">
+                    <div class="kpi-label">Total PO Value</div>
+                    <div class="kpi-value">{totalPOValue}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warning">
+                    <div class="kpi-label">Open MRs</div>
+                    <div class="kpi-value">{openMRCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-error">
+                    <div class="kpi-label">Critical POs</div>
+                    <div class="kpi-value">{criticalPOCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warning">
+                    <div class="kpi-label">Pending Approval</div>
+                    <div class="kpi-value">{pendingApprovalCount}</div>
+                </div>
+            </div>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading procurement data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+
+                <!-- Status boards -->
+                <div class="slds-grid slds-gutters_x-small slds-m-bottom_medium">
+                    <!-- MR Board -->
+                    <div class="slds-col slds-size_1-of-3">
+                        <div class="board-panel board-mr">
+                            <div class="board-header">
+                                <lightning-icon icon-name="standard:document" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                Material Requisitions
+                            </div>
+                            <template for:each={mrCounts} for:item="item">
+                                <div key={item.status} class="status-row">
+                                    <span class="status-label">{item.status}</span>
+                                    <span class={item.badgeClass}>{item.countStr}</span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <!-- RFQ Board -->
+                    <div class="slds-col slds-size_1-of-3">
+                        <div class="board-panel board-rfq">
+                            <div class="board-header">
+                                <lightning-icon icon-name="standard:quote" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                RFQs
+                            </div>
+                            <template for:each={rfqCounts} for:item="item">
+                                <div key={item.status} class="status-row">
+                                    <span class="status-label">{item.status}</span>
+                                    <span class={item.badgeClass}>{item.countStr}</span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <!-- PO Board -->
+                    <div class="slds-col slds-size_1-of-3">
+                        <div class="board-panel board-po">
+                            <div class="board-header">
+                                <lightning-icon icon-name="standard:orders" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                Purchase Orders
+                            </div>
+                            <template for:each={poCounts} for:item="item">
+                                <div key={item.status} class="status-row">
+                                    <span class="status-label">{item.status}</span>
+                                    <span class={item.badgeClass}>{item.countStr}</span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PO list toolbar -->
+                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-end slds-m-bottom_x-small po-toolbar">
+                    <span class="slds-text-heading_small">Purchase Orders</span>
+                    <div class="slds-grid slds-grid_vertical-align-end slds-gutters_x-small">
+                        <div class="slds-col">
+                            <lightning-input
+                                type="search"
+                                label="Search POs"
+                                variant="label-hidden"
+                                placeholder="Search by PO #, vendor, or status…"
+                                value={poSearchTerm}
+                                onchange={handlePoSearch}>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-no-flex">
+                            <lightning-button-group>
+                                <lightning-button label="All POs"       variant={allVariant}      onclick={showAll}></lightning-button>
+                                <lightning-button label="Critical Only" variant={criticalVariant} icon-name="utility:priority" onclick={showCritical}></lightning-button>
+                            </lightning-button-group>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">{poCountLabel}</div>
+
+                <template if:true={filteredPoList.length}>
+                    <div class="epc-datatable-wrap">
+                        <lightning-datatable
+                            key-field="Id"
+                            data={filteredPoList}
+                            columns={poColumns}
+                            hide-checkbox-column
+                            column-widths-mode="auto"
+                            min-column-width="80"
+                            onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                    </div>
+                </template>
+
+                <template if:false={filteredPoList.length}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="utility:search" size="small" class="slds-m-bottom_x-small"></lightning-icon>
+                        <p>{emptyPoMessage}</p>
+                    </div>
+                </template>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

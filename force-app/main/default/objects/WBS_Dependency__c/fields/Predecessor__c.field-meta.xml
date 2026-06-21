@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Predecessor__c</fullName>
+    <label>Predecessor</label>
+    <description>The WBS Item that must complete/start before the successor (per type).</description>
+    <referenceTo>WBS_Item__c</referenceTo>
+    <relationshipLabel>Successor Links</relationshipLabel>
+    <relationshipName>Successor_Links</relationshipName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,62 @@
+:host { display: block; width: 100%; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.table-count {
+    font-size: 0.75rem;
+    color: #706e6b;
+}
+
+.metric-card {
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--slds-g-color-surface-container-1, #f8f8f8);
+    border: 1px solid var(--slds-g-color-border-1, #e0e0e0);
+}
+
+.metric-label {
+    font-size: 0.65rem;
+    color: var(--slds-g-color-on-surface, #444);
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.04em;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--slds-g-color-on-surface, #181818);
+    line-height: 1.2;
+}
+
+.metric-value--success { color: #2e844a; }
+.metric-value--warning { color: #706e00; }
+.metric-value--error   { color: #ba0517; }
+.metric-value--critical { color: #e53935; }
+
+.metric-pct {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-left: 0.125rem;
+}
+
+/* WBS variance table cell colours */
+.sv-behind { font-weight: 700; color: #c23934; }
+.sv-ahead  { font-weight: 600; color: #027e46; }
+
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #706e6b;
+}
+.empty-state-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #3e3e3c;
+    margin-top: 0.5rem;
+}
+.empty-state-hint {
+    font-size: 0.8125rem;
+    color: #aeaeae;
+    margin-top: 0.25rem;
+}

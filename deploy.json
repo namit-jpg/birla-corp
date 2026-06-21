@@ -1,0 +1,2540 @@
+[97m{[39m
+  [94m"status"[39m: [34m0[39m[32m,[39m
+  [94m"result"[39m: [97m{[39m
+    [94m"checkOnly"[39m: [91mfalse[39m[32m,[39m
+    [94m"completedDate"[39m: [92m"2026-06-15T05:05:48.000Z"[39m[32m,[39m
+    [94m"createdBy"[39m: [92m"005Hs00000IyNJx"[39m[32m,[39m
+    [94m"createdByName"[39m: [92m"Namit Dasappanavar"[39m[32m,[39m
+    [94m"createdDate"[39m: [92m"2026-06-15T05:05:35.000Z"[39m[32m,[39m
+    [94m"details"[39m: [97m{[39m
+      [94m"componentSuccesses"[39m: [97m[[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:46.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Commissioning_Tracker.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Commissioning_Tracker"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBZKA4"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/HIRA__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"HIRA__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOenIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Handover_Package__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Handover_Package__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeyIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/IBR_Test__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"IBR_Test__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOedIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Incident__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Incident__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeoIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Inspection_Request__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Inspection_Request__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeeIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Inspection_Test_Plan__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Inspection_Test_Plan__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOefIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Interface__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Interface__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOduIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Knowledge__kav.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Knowledge__kav"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mt0SIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/MR_Line__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"MR_Line__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdgIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Maps_Settings.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Maps_Settings"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz2IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Material_Requisition__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Material_Requisition__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdhIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Milestone__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Milestone__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdYIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Mobilization__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Mobilization__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeBIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/NCR__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"NCR__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeCIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Pardot_Create_External_Activities.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Pardot_Create_External_Activities"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszVIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Pardot_Insert_External_Activites.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Pardot_Insert_External_Activites"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszWIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Platform_Events_Wizard.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Platform_Events_Wizard"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz9IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_SCOM_Auction_Bid__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_SCOM_Auction_Bid__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyoIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_SCOM_Auction__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_SCOM_Auction__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msypIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_SCOM_OOA_Approved_Domain__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_SCOM_OOA_Approved_Domain__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyqIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_SCOM_OOA_Commerce_Approval_Requests__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_SCOM_OOA_Commerce_Approval_Requests__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyrIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_SCOM_OOA_Commerce_User_Requests__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_SCOM_OOA_Commerce_User_Requests__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msysIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_SFS_Vehicle_Inspection__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_SFS_Vehicle_Inspection__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msymIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Sales_Invoice_Example__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Sales_Invoice_Example__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyvIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Sales_Voice_Call_1.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Sales_Voice_Call_1"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msywIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Sales_Voice_Call_2.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Sales_Voice_Call_2"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyxIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Sales_Voice_Call_3.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Sales_Voice_Call_3"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyyIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Bot_Message__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Bot_Message__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msydIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_CTI_Flow.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_CTI_Flow"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyeIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Conversation_Helper__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Conversation_Helper__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msybIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Einstein_Agent_Helper__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Einstein_Agent_Helper__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyfIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Daily_Progress_Capture.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Daily_Progress_Capture"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBaKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Equipment_Utilisation.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Equipment_Utilisation"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBbKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_HSE_Hub.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_HSE_Hub"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBcKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Handover_Builder.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Handover_Builder"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBdKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Permit_Planner.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Permit_Planner"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBeKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Procurement_Console.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Procurement_Console"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBfKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Quality_Dashboard.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Quality_Dashboard"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBgKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Quality_Hub.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Quality_Hub"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBhKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Safety_Dashboard.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Safety_Dashboard"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBiKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Site_Execution_Board.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Site_Execution_Board"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBjKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"FlexiPage"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"flexipages/EPC_Work_Package_Kanban.flexipage"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Work_Package_Kanban"[39m[32m,[39m
+          [94m"id"[39m: [92m"0M0Hs000002KQBkKAO"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/AI_Agent_Conversation_Entry__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"AI_Agent_Conversation_Entry__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdTIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/AI_Agent_Conversation__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"AI_Agent_Conversation__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdUIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/AI_Agent__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"AI_Agent__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdVIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/AnalyticsDemoTools.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"AnalyticsDemoTools"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msySIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Audit_Finding__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Audit_Finding__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOelIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/B2B_Commerce_Service_Console.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"B2B_Commerce_Service_Console"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msytIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CAPA__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CAPA__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOebIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Exercise__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Exercise__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszIIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Milestone_Progress_V2__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Milestone_Progress_V2__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszJIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Milestone_Progress__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Milestone_Progress__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszKIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Milestone__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Milestone__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszLIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Milestone_and_Exercise__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Milestone_and_Exercise__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszMIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Program__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Program__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszNIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/CGC_Section__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"CGC_Section__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszOIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Calibration_Record__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Calibration_Record__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOecIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Change_Order__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Change_Order__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOddIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Commerce_Dashboard.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Commerce_Dashboard"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msynIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Commissioning_Procedure__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Commissioning_Procedure__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOevIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Completion__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Completion__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOewIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Contractor_Performance__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Contractor_Performance__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOe7IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Crew_Management.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Crew_Management"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyjIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/DBM_25.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"DBM_25"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyTIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/OHS_Compliance_Item__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"OHS_Compliance_Item__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOepIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Observation__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Observation__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeqIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/PO_Line__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"PO_Line__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdiIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/PSBulkActionConfig__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"PSBulkActionConfig__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyuIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Permit_to_Work__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Permit_to_Work__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOerIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Pour_Card__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Pour_Card__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOegIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Progress_Claim__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Progress_Claim__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdjIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Project__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Project__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdZIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Punch_List_Item__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Punch_List_Item__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOezIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Purchase_Order__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Purchase_Order__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdkIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/RFI__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"RFI__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdvIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/RFQ_Line__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"RFQ_Line__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdlIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Workforce_Case_History__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Workforce_Case_History__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mt08IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Workforce_Chat_History__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Workforce_Chat_History__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mt09IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Workforce_VoiceCall_History__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Workforce_VoiceCall_History__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mt0AIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_openCTIconfig__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_openCTIconfig__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyiIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Tool_Einstein_EMC.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Tool_Einstein_EMC"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszAIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SFDC_Channel_Account_Plan__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SFDC_Channel_Account_Plan__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszQIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SFS_Quick_Setup.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SFS_Quick_Setup"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyZIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/START_HERE.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"START_HERE"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz8IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Safety_Audit__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Safety_Audit__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOesIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Salesforce_Rewind_History_Record__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Salesforce_Rewind_History_Record__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyRIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Session_Time__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Session_Time__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mt0QIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Shipment__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Shipment__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdnIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Site_Instruction__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Site_Instruction__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeEIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Spotter_Configuration.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Spotter_Configuration"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyVIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Submittal__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Submittal__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdwIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Omni_Supervisor_Dashboard.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Omni_Supervisor_Dashboard"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msygIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Service_Queue_Stat__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Service_Queue_Stat__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyhIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Tableau_Insights.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Tableau_Insights"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyYIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Toolbox_Talk__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Toolbox_Talk__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOetIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Training_Record__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Training_Record__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOf0IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Transmittal__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Transmittal__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdxIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/WBS_Item__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"WBS_Item__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdaIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Weld_Record__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Weld_Record__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOehIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Work_Front__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Work_Front__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeFIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Work_Package__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Work_Package__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdbIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/XDO_Tool_Tracking_Event__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"XDO_Tool_Tracking_Event__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz5IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/maps__LiveDriver__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"maps__LiveDriver__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz3IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/maps__LiveEventAssociation__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"maps__LiveEventAssociation__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz4IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomApplication"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"applications/EPC_Execution.app"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Execution"[39m[32m,[39m
+          [94m"id"[39m: [92m"02uHs0000038GtbIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m""[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"package.xml"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"package.xml"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/RFQ__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"RFQ__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdmIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Reply_Rec_Demo_Helper_QuickText__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Reply_Rec_Demo_Helper_QuickText__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyaIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Reply_Rec_Demo_Helper__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Reply_Rec_Demo_Helper__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msycIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Resource__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Resource__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeDIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Analytics_Dashboard_Magic.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Analytics_Dashboard_Magic"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszSIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_B2BCommerce_Tier_Voucher_Rule__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_B2BCommerce_Tier_Voucher_Rule__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyWIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_ChannelPartner_Certification__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_ChannelPartner_Certification__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszPIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Community_Course_Enrollment__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Community_Course_Enrollment__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz6IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Community_Training_Course__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Community_Training_Course__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz7IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Einstein_Customer_Profile__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Einstein_Customer_Profile__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mt0FIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Experience_ContentArticle__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Experience_ContentArticle__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszTIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Experience_ContentCollection__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Experience_ContentCollection__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszUIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_FSL_Demo_Tools.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_FSL_Demo_Tools"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyXIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_FSL_Work_Type_Analysis.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_FSL_Work_Type_Analysis"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msylIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_Lobby_Management.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_Lobby_Management"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msz0IAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/SDO_OMS_Order_Search.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"SDO_OMS_Order_Search"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyzIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/DBM_Report__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"DBM_Report__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msyUIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Daily_Progress__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Daily_Progress__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOe8IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Document_Revision__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Document_Revision__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdsIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Drawing__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Drawing__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdtIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Commissioning_Tracker.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Commissioning_Tracker"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOi4IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Daily_Progress_Capture.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Daily_Progress_Capture"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOi5IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Equipment_Utilisation.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Equipment_Utilisation"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOi6IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_HSE_Hub.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_HSE_Hub"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOi7IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Handover_Builder.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Handover_Builder"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOi8IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Permit_Planner.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Permit_Planner"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOi9IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Procurement_Console.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Procurement_Console"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOiAIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Quality_Dashboard.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Quality_Dashboard"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOiBIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Quality_Hub.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Quality_Hub"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOiCIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Safety_Dashboard.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Safety_Dashboard"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOiDIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Site_Execution_Board.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Site_Execution_Board"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOiEIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mtrue[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mtrue[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/EPC_Work_Package_Kanban.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"EPC_Work_Package_Kanban"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOiFIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Emergency_Plan__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Emergency_Plan__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOemIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Equipment__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Equipment__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOeAIAU"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/FSL__Optimization_Request__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"FSL__Optimization_Request__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000msykIAA"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Fake_Report_Data_Object__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Fake_Report_Data_Object__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000mszRIAQ"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Equipment_Log__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Equipment_Log__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOe9IAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Final_Acceptance__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Final_Acceptance__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOexIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Force_Majeure_Event__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Force_Majeure_Event__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdeIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m[32m,[39m
+        [97m{[39m
+          [94m"changed"[39m: [91mfalse[39m[32m,[39m
+          [94m"componentType"[39m: [92m"CustomTab"[39m[32m,[39m
+          [94m"created"[39m: [91mfalse[39m[32m,[39m
+          [94m"createdDate"[39m: [92m"2026-06-15T05:05:47.000Z"[39m[32m,[39m
+          [94m"deleted"[39m: [91mfalse[39m[32m,[39m
+          [94m"fileName"[39m: [92m"tabs/Goods_Receipt__c.tab"[39m[32m,[39m
+          [94m"fullName"[39m: [92m"Goods_Receipt__c"[39m[32m,[39m
+          [94m"id"[39m: [92m"01rHs000000uOdfIAE"[39m[32m,[39m
+          [94m"success"[39m: [91mtrue[39m
+        [97m}[39m
+      [97m][39m[32m,[39m
+      [94m"runTestResult"[39m: [97m{[39m
+        [94m"numFailures"[39m: [34m0[39m[32m,[39m
+        [94m"numTestsRun"[39m: [34m0[39m[32m,[39m
+        [94m"totalTime"[39m: [34m0[39m[32m,[39m
+        [94m"codeCoverage"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"codeCoverageWarnings"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"failures"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"flowCoverage"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"flowCoverageWarnings"[39m: [97m[[39m[97m][39m[32m,[39m
+        [94m"successes"[39m: [97m[[39m[97m][39m
+      [97m}[39m[32m,[39m
+      [94m"componentFailures"[39m: [97m[[39m[97m][39m
+    [97m}[39m[32m,[39m
+    [94m"done"[39m: [91mtrue[39m[32m,[39m
+    [94m"id"[39m: [92m"0AfHs00002zVyLGKA0"[39m[32m,[39m
+    [94m"ignoreWarnings"[39m: [91mfalse[39m[32m,[39m
+    [94m"lastModifiedDate"[39m: [92m"2026-06-15T05:05:48.000Z"[39m[32m,[39m
+    [94m"numberComponentErrors"[39m: [34m0[39m[32m,[39m
+    [94m"numberComponentsDeployed"[39m: [34m146[39m[32m,[39m
+    [94m"numberComponentsTotal"[39m: [34m146[39m[32m,[39m
+    [94m"numberFiles"[39m: [92m"150"[39m[32m,[39m
+    [94m"numberTestErrors"[39m: [34m0[39m[32m,[39m
+    [94m"numberTestsCompleted"[39m: [34m0[39m[32m,[39m
+    [94m"numberTestsTotal"[39m: [34m0[39m[32m,[39m
+    [94m"rollbackOnError"[39m: [91mtrue[39m[32m,[39m
+    [94m"runTestsEnabled"[39m: [91mfalse[39m[32m,[39m
+    [94m"startDate"[39m: [92m"2026-06-15T05:05:36.000Z"[39m[32m,[39m
+    [94m"status"[39m: [92m"Succeeded"[39m[32m,[39m
+    [94m"success"[39m: [91mtrue[39m[32m,[39m
+    [94m"zipSize"[39m: [34m48418[39m[32m,[39m
+    [94m"files"[39m: [97m[[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Execution"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomApplication"[39m[32m,[39m
+        [94m"state"[39m: [92m"Changed"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\applications\\EPC_Execution.app-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"AI_Agent_Conversation_Entry__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\AI_Agent_Conversation_Entry__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"AI_Agent_Conversation__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\AI_Agent_Conversation__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"AI_Agent__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\AI_Agent__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"AnalyticsDemoTools"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\AnalyticsDemoTools.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Audit_Finding__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Audit_Finding__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"B2B_Commerce_Service_Console"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\B2B_Commerce_Service_Console.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CAPA__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CAPA__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Exercise__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Exercise__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Milestone_Progress_V2__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Milestone_Progress_V2__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Milestone_Progress__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Milestone_Progress__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Milestone__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Milestone__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Milestone_and_Exercise__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Milestone_and_Exercise__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Program__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Program__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"CGC_Section__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\CGC_Section__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Calibration_Record__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Calibration_Record__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Change_Order__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Change_Order__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Commerce_Dashboard"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Commerce_Dashboard.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Commissioning_Procedure__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Commissioning_Procedure__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Completion__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Completion__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Contractor_Performance__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Contractor_Performance__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Crew_Management"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Crew_Management.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"DBM_25"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\DBM_25.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"DBM_Report__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\DBM_Report__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Daily_Progress__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Daily_Progress__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Document_Revision__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Document_Revision__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Drawing__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Drawing__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Commissioning_Tracker"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Commissioning_Tracker.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Daily_Progress_Capture"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Daily_Progress_Capture.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Equipment_Utilisation"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Equipment_Utilisation.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_HSE_Hub"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_HSE_Hub.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Handover_Builder"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Handover_Builder.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Permit_Planner"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Permit_Planner.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Procurement_Console"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Procurement_Console.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Quality_Dashboard"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Quality_Dashboard.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Quality_Hub"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Quality_Hub.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Safety_Dashboard"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Safety_Dashboard.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Site_Execution_Board"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Site_Execution_Board.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Work_Package_Kanban"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\EPC_Work_Package_Kanban.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Emergency_Plan__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Emergency_Plan__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Equipment_Log__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Equipment_Log__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Equipment__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Equipment__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"FSL__Optimization_Request__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\FSL__Optimization_Request__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Fake_Report_Data_Object__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Fake_Report_Data_Object__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Final_Acceptance__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Final_Acceptance__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Force_Majeure_Event__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Force_Majeure_Event__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Goods_Receipt__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Goods_Receipt__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"HIRA__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\HIRA__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Handover_Package__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Handover_Package__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"IBR_Test__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\IBR_Test__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Incident__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Incident__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Inspection_Request__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Inspection_Request__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Inspection_Test_Plan__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Inspection_Test_Plan__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Interface__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Interface__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Knowledge__kav"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Knowledge__kav.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"MR_Line__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\MR_Line__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Maps_Settings"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Maps_Settings.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Material_Requisition__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Material_Requisition__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Milestone__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Milestone__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Mobilization__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Mobilization__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"NCR__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\NCR__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"OHS_Compliance_Item__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\OHS_Compliance_Item__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Observation__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Observation__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"PO_Line__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\PO_Line__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"PSBulkActionConfig__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\PSBulkActionConfig__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Permit_to_Work__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Permit_to_Work__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Pour_Card__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Pour_Card__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Progress_Claim__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Progress_Claim__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Project__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Project__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Punch_List_Item__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Punch_List_Item__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Purchase_Order__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Purchase_Order__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"RFI__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\RFI__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"RFQ_Line__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\RFQ_Line__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"RFQ__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\RFQ__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Reply_Rec_Demo_Helper_QuickText__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Reply_Rec_Demo_Helper_QuickText__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Reply_Rec_Demo_Helper__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Reply_Rec_Demo_Helper__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Resource__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Resource__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Analytics_Dashboard_Magic"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Analytics_Dashboard_Magic.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_B2BCommerce_Tier_Voucher_Rule__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_B2BCommerce_Tier_Voucher_Rule__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_ChannelPartner_Certification__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_ChannelPartner_Certification__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Community_Course_Enrollment__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Community_Course_Enrollment__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Community_Training_Course__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Community_Training_Course__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Einstein_Customer_Profile__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Einstein_Customer_Profile__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Experience_ContentArticle__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Experience_ContentArticle__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Experience_ContentCollection__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Experience_ContentCollection__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_FSL_Demo_Tools"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_FSL_Demo_Tools.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_FSL_Work_Type_Analysis"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_FSL_Work_Type_Analysis.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Lobby_Management"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Lobby_Management.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_OMS_Order_Search"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_OMS_Order_Search.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Pardot_Create_External_Activities"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Pardot_Create_External_Activities.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Pardot_Insert_External_Activites"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Pardot_Insert_External_Activites.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Platform_Events_Wizard"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Platform_Events_Wizard.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_SCOM_Auction_Bid__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_SCOM_Auction_Bid__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_SCOM_Auction__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_SCOM_Auction__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_SCOM_OOA_Approved_Domain__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_SCOM_OOA_Approved_Domain__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_SCOM_OOA_Commerce_Approval_Requests__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_SCOM_OOA_Commerce_Approval_Requests__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_SCOM_OOA_Commerce_User_Requests__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_SCOM_OOA_Commerce_User_Requests__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_SFS_Vehicle_Inspection__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_SFS_Vehicle_Inspection__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Sales_Invoice_Example__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Sales_Invoice_Example__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Sales_Voice_Call_1"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Sales_Voice_Call_1.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Sales_Voice_Call_2"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Sales_Voice_Call_2.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Sales_Voice_Call_3"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Sales_Voice_Call_3.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Bot_Message__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Bot_Message__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_CTI_Flow"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_CTI_Flow.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Conversation_Helper__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Conversation_Helper__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Einstein_Agent_Helper__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Einstein_Agent_Helper__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Omni_Supervisor_Dashboard"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Omni_Supervisor_Dashboard.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Queue_Stat__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Queue_Stat__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Workforce_Case_History__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Workforce_Case_History__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Workforce_Chat_History__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Workforce_Chat_History__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_Workforce_VoiceCall_History__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_Workforce_VoiceCall_History__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Service_openCTIconfig__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Service_openCTIconfig__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SDO_Tool_Einstein_EMC"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SDO_Tool_Einstein_EMC.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SFDC_Channel_Account_Plan__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SFDC_Channel_Account_Plan__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"SFS_Quick_Setup"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\SFS_Quick_Setup.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"START_HERE"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\START_HERE.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Safety_Audit__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Safety_Audit__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Salesforce_Rewind_History_Record__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Salesforce_Rewind_History_Record__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Session_Time__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Session_Time__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Shipment__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Shipment__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Site_Instruction__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Site_Instruction__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Spotter_Configuration"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Spotter_Configuration.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Submittal__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Submittal__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Tableau_Insights"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Tableau_Insights.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Toolbox_Talk__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Toolbox_Talk__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Training_Record__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Training_Record__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Transmittal__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Transmittal__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"WBS_Item__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\WBS_Item__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Weld_Record__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Weld_Record__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Work_Front__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Work_Front__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"Work_Package__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\Work_Package__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"XDO_Tool_Tracking_Event__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\XDO_Tool_Tracking_Event__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"maps__LiveDriver__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\maps__LiveDriver__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"maps__LiveEventAssociation__c"[39m[32m,[39m
+        [94m"type"[39m: [92m"CustomTab"[39m[32m,[39m
+        [94m"state"[39m: [92m"Unchanged"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\tabs\\maps__LiveEventAssociation__c.tab-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Commissioning_Tracker"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Commissioning_Tracker.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Daily_Progress_Capture"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Daily_Progress_Capture.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Equipment_Utilisation"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Equipment_Utilisation.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_HSE_Hub"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_HSE_Hub.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Handover_Builder"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Handover_Builder.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Permit_Planner"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Permit_Planner.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Procurement_Console"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Procurement_Console.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Quality_Dashboard"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Quality_Dashboard.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Quality_Hub"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Quality_Hub.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Safety_Dashboard"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Safety_Dashboard.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Site_Execution_Board"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Site_Execution_Board.flexipage-meta.xml"[39m
+      [97m}[39m[32m,[39m
+      [97m{[39m
+        [94m"fullName"[39m: [92m"EPC_Work_Package_Kanban"[39m[32m,[39m
+        [94m"type"[39m: [92m"FlexiPage"[39m[32m,[39m
+        [94m"state"[39m: [92m"Created"[39m[32m,[39m
+        [94m"filePath"[39m: [92m"C:\\Users\\HP\\.claude\\jobs\\f849bbb0\\tmp\\birlapull\\force-app\\main\\default\\flexipages\\EPC_Work_Package_Kanban.flexipage-meta.xml"[39m
+      [97m}[39m
+    [97m][39m[32m,[39m
+    [94m"zipFileCount"[39m: [34m147[39m[32m,[39m
+    [94m"deployUrl"[39m: [92m"https://wa1781153253533.my.salesforce.com/lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfHs00002zVyLGKA0%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"[39m
+  [97m}[39m[32m,[39m
+  [94m"warnings"[39m: [97m[[39m[97m][39m
+[97m}[39m

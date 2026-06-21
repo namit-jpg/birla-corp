@@ -1,0 +1,83 @@
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #706e6b;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 100px;
+}
+.kpi-card.kpi-active   { border-left-color: #027e46; background: #f0faf5; }
+.kpi-card.kpi-pending  { border-left-color: #0070d2; background: #f0f6ff; }
+.kpi-card.kpi-expiring { border-left-color: #ff9e2c; background: #fffbf0; }
+.kpi-card.kpi-expired  { border-left-color: #c23934; background: #fdf3f2; }
+.kpi-label {
+    font-size: 0.7rem;
+    color: #706e6b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kpi-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #032d60;
+    margin-top: 2px;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.filter-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #706e6b;
+    margin-right: 6px;
+    white-space: nowrap;
+}
+.filter-btn { margin-right: 2px; }
+
+/* Permit status cell colours */
+.ptw-active   { font-weight: 700; color: #027e46; }
+.ptw-approved { font-weight: 600; color: #0070d2; }
+.ptw-draft    { color: #706e6b; }
+.ptw-expired  { font-weight: 600; color: #c23934; }
+.ptw-closed   { color: #aeaeae; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.count-label {
+    font-size: 0.75rem;
+    color: #706e6b;
+    margin-bottom: 0.5rem;
+}
+
+.expiring-alert .slds-notify { margin-bottom: 0; }
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #aeaeae;
+    padding: 2rem;
+    font-size: 0.875rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1px dashed #dddbda;
+}
+.empty-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3e3e3c;
+    margin-top: 0.75rem;
+}
+.empty-msg {
+    font-size: 0.8125rem;
+    color: #706e6b;
+    margin-top: 0.25rem;
+    max-width: 360px;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>What: Used to showcase Workforce Engagement. 
+Who: Marc Hutchinson &amp; the Service Team. 
+When: August 2021</description>
+    <motif>Custom55: Books</motif>
+</CustomTab>

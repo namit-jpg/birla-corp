@@ -1,0 +1,147 @@
+<template>
+    <lightning-card icon-name="standard:quality">
+        <span slot="title">Quality Hub</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New ITP"  icon-name="utility:add" icon-position="left" variant="neutral" onclick={handleNewITP}  class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New NCR"  icon-name="utility:add" icon-position="left" variant="neutral" onclick={handleNewNCR}  class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New CAPA" icon-name="utility:add" icon-position="left" variant="brand"   onclick={handleNewCAPA}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- KPI strip -->
+            <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="slds-col kpi-card kpi-ok">
+                    <div class="kpi-label">Pass Rate</div>
+                    <div class="kpi-value">{passRate}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-ok">
+                    <div class="kpi-label">Passed</div>
+                    <div class="kpi-value">{passedCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-fail">
+                    <div class="kpi-label">Failed</div>
+                    <div class="kpi-value">{failedCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warn">
+                    <div class="kpi-label">Open NCRs</div>
+                    <div class="kpi-value">{openNcrCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warn">
+                    <div class="kpi-label">Open CAPAs</div>
+                    <div class="kpi-value">{openCapaCount}</div>
+                </div>
+            </div>
+
+            <template if:true={calibAlert}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_medium" role="alert">
+                    <lightning-icon icon-name="utility:warning" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                    {calibCount} calibration record(s) are expired — check the Calibrations tab.
+                </div>
+            </template>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading quality data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <lightning-tabset>
+                    <!-- ITPs -->
+                    <lightning-tab label="ITPs" value="itps">
+                        <div class="slds-p-top_small">
+                            <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">{itpCountLabel}</div>
+                            <div class="epc-datatable-wrap">
+                                <lightning-datatable
+                                    key-field="Id"
+                                    data={itps}
+                                    columns={itpColumns}
+                                    hide-checkbox-column
+                                    column-widths-mode="auto"
+                                    min-column-width="80"
+                                    onrowaction={handleRowAction}>
+                                </lightning-datatable>
+                            </div>
+                            <template if:false={itps.length}><div class="empty-state">No ITPs found.</div></template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- Inspections -->
+                    <lightning-tab label="Inspections" value="inspections">
+                        <div class="slds-p-top_small">
+                            <div class="slds-button-group slds-m-bottom_small" role="group">
+                                <template for:each={inspStatusButtons} for:item="btn">
+                                    <lightning-button key={btn.value} label={btn.label} variant={btn.variant} data-value={btn.value} onclick={handleInspFilter} class="filter-btn"></lightning-button>
+                                </template>
+                            </div>
+                            <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">{inspectionCountLabel}</div>
+                            <div class="epc-datatable-wrap">
+                                <lightning-datatable
+                                    key-field="Id"
+                                    data={filteredInspections}
+                                    columns={irColumns}
+                                    hide-checkbox-column
+                                    column-widths-mode="auto"
+                                    min-column-width="80"
+                                    onrowaction={handleRowAction}>
+                                </lightning-datatable>
+                            </div>
+                            <template if:false={filteredInspections.length}><div class="empty-state">No inspections found for the selected filter.</div></template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- NCRs -->
+                    <lightning-tab label="NCRs" value="ncrs">
+                        <div class="slds-p-top_small">
+                            <div class="slds-button-group slds-m-bottom_small" role="group">
+                                <template for:each={ncrSevButtons} for:item="btn">
+                                    <lightning-button key={btn.value} label={btn.label} variant={btn.variant} data-value={btn.value} onclick={handleNcrFilter} class="filter-btn"></lightning-button>
+                                </template>
+                            </div>
+                            <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">{ncrCountLabel}</div>
+                            <div class="epc-datatable-wrap">
+                                <lightning-datatable
+                                    key-field="Id"
+                                    data={filteredNcrs}
+                                    columns={ncrColumns}
+                                    hide-checkbox-column
+                                    column-widths-mode="auto"
+                                    min-column-width="80"
+                                    onrowaction={handleRowAction}>
+                                </lightning-datatable>
+                            </div>
+                            <template if:false={filteredNcrs.length}><div class="empty-state">No NCRs found for the selected severity.</div></template>
+                        </div>
+                    </lightning-tab>
+
+                    <!-- CAPAs -->
+                    <lightning-tab label="CAPAs" value="capas">
+                        <div class="slds-p-top_small">
+                            <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">{capaCountLabel}</div>
+                            <div class="epc-datatable-wrap">
+                                <lightning-datatable
+                                    key-field="Id"
+                                    data={capas}
+                                    columns={capaColumns}
+                                    hide-checkbox-column
+                                    column-widths-mode="auto"
+                                    min-column-width="80"
+                                    onrowaction={handleRowAction}>
+                                </lightning-datatable>
+                            </div>
+                            <template if:false={capas.length}><div class="empty-state">No CAPAs found.</div></template>
+                        </div>
+                    </lightning-tab>
+                </lightning-tabset>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

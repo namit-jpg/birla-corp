@@ -1,0 +1,142 @@
+<template>
+    <lightning-card icon-name="standard:live_chat">
+        <span slot="title">Handover Builder</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New Package"  icon-name="utility:add" icon-position="left" variant="neutral" onclick={handleNewPackage}  class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New Punch"    icon-name="utility:add" icon-position="left" variant="neutral" onclick={handleNewPunch}    class="slds-m-right_xx-small"></lightning-button>
+            <lightning-button label="New Training" icon-name="utility:add" icon-position="left" variant="brand"   onclick={handleNewTraining}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading handover data..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+
+                <!-- KPI strip -->
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col {catAClass}">
+                        <div class="kpi-label">Open Cat-A</div>
+                        <div class="kpi-value">{kpis.openCatA}</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-warn">
+                        <div class="kpi-label">Open Cat-B</div>
+                        <div class="kpi-value">{kpis.openCatB}</div>
+                    </div>
+                    <div class="slds-col kpi-card">
+                        <div class="kpi-label">Punch Closure</div>
+                        <div class="kpi-value">{punchClosureRate}%</div>
+                    </div>
+                    <div class="slds-col kpi-card kpi-ok">
+                        <div class="kpi-label">Completions Signed Off</div>
+                        <div class="kpi-value">{kpis.completionsSignedOff}</div>
+                    </div>
+                    <div class="slds-col {pkgsClass}">
+                        <div class="kpi-label">Pkgs Ready / Accepted</div>
+                        <div class="kpi-value">{kpis.packagesReadyOrAccepted}</div>
+                    </div>
+                </div>
+
+                <lightning-tabset>
+
+                    <lightning-tab label="Handover Packages" value="packages">
+                        <div class="slds-p-top_small">
+                            <p class="table-count">{packageCountLabel}</p>
+                            <template if:true={hasPackages}>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable key-field="Id" data={packages} columns={packageColumns} hide-checkbox-column column-widths-mode="auto" min-column-width="80" onrowaction={handleRowAction}></lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasPackages}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="utility:package" size="small" alternative-text="No packages"></lightning-icon>
+                                    <p class="empty-state-title">No handover packages found</p>
+                                    <p class="empty-state-hint">Create a package to begin client handover.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <lightning-tab label="Punch List" value="punch">
+                        <div class="slds-p-top_small">
+                            <!-- Category filter -->
+                            <div class="filter-row slds-m-bottom_x-small">
+                                <span class="filter-label">Category:</span>
+                                <template for:each={catFilterButtons} for:item="btn">
+                                    <button key={btn.value} class={btn.cls} data-value={btn.value} onclick={handleCatFilter}>{btn.label}</button>
+                                </template>
+                            </div>
+                            <!-- Status filter -->
+                            <div class="filter-row slds-m-bottom_small">
+                                <span class="filter-label">Status:</span>
+                                <template for:each={statusFilterButtons} for:item="btn">
+                                    <button key={btn.value} class={btn.cls} data-value={btn.value} onclick={handleStatusFilter}>{btn.label}</button>
+                                </template>
+                            </div>
+                            <p class="table-count">{punchCountLabel}</p>
+                            <template if:true={hasFilteredPunch}>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable key-field="Id" data={filteredPunchItems} columns={punchColumns} hide-checkbox-column column-widths-mode="auto" min-column-width="80" onrowaction={handleRowAction}></lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasFilteredPunch}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="utility:warning" size="small" alternative-text="No punch items"></lightning-icon>
+                                    <p class="empty-state-title">No punch items match current filters</p>
+                                    <p class="empty-state-hint">Adjust category or status filters, or log a new punch item.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <lightning-tab label="Training Records" value="training">
+                        <div class="slds-p-top_small">
+                            <p class="table-count">{trainingCountLabel}</p>
+                            <template if:true={hasTraining}>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable key-field="Id" data={trainingRecords} columns={trainingColumns} hide-checkbox-column column-widths-mode="auto" min-column-width="80" onrowaction={handleRowAction}></lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasTraining}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="utility:education" size="small" alternative-text="No training"></lightning-icon>
+                                    <p class="empty-state-title">No training records found</p>
+                                    <p class="empty-state-hint">Add training records to track competency sign-off.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                    <lightning-tab label="Final Acceptance" value="fac">
+                        <div class="slds-p-top_small">
+                            <p class="table-count">{facCountLabel}</p>
+                            <template if:true={hasFacRecords}>
+                                <div class="epc-datatable-wrap">
+                                    <lightning-datatable key-field="Id" data={facRecords} columns={facColumns} hide-checkbox-column column-widths-mode="auto" min-column-width="80" onrowaction={handleRowAction}></lightning-datatable>
+                                </div>
+                            </template>
+                            <template if:false={hasFacRecords}>
+                                <div class="empty-state">
+                                    <lightning-icon icon-name="utility:approval" size="small" alternative-text="No FAC records"></lightning-icon>
+                                    <p class="empty-state-title">No FAC records found</p>
+                                    <p class="empty-state-hint">Final acceptance records will appear here once created.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </lightning-tab>
+
+                </lightning-tabset>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

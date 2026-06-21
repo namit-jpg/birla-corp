@@ -1,0 +1,103 @@
+<template>
+    <lightning-card icon-name="standard:asset_object">
+        <span slot="title">Equipment Utilisation</span>
+        <div slot="actions" class="slds-grid slds-gutters_xx-small">
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" onclick={handleRefresh} class="slds-m-right_xx-small"></lightning-button-icon>
+            <lightning-button label="New Equipment" icon-name="utility:add" icon-position="left" variant="brand" onclick={handleNewEquipment}></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert"><span>{error}</span></div>
+            </template>
+
+            <!-- KPI strip -->
+            <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="slds-col kpi-card">
+                    <div class="kpi-label">Total Equipment</div>
+                    <div class="kpi-value">{totalCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-success">
+                    <div class="kpi-label">In Use</div>
+                    <div class="kpi-value">{inUseCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-warning">
+                    <div class="kpi-label">Maintenance</div>
+                    <div class="kpi-value">{maintCount}</div>
+                </div>
+                <div class="slds-col kpi-card">
+                    <div class="kpi-label">Idle</div>
+                    <div class="kpi-value">{idleCount}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-info">
+                    <div class="kpi-label">Total Hours</div>
+                    <div class="kpi-value">{totalHours}</div>
+                </div>
+                <div class="slds-col kpi-card kpi-info">
+                    <div class="kpi-label">Avg Utilisation</div>
+                    <div class="kpi-value">{avgUtil}</div>
+                </div>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="slds-button-group slds-m-bottom_small" role="group">
+                <template for:each={filterButtonsWithState} for:item="btn">
+                    <lightning-button
+                        key={btn.value}
+                        label={btn.label}
+                        variant={btn.variant}
+                        data-value={btn.value}
+                        onclick={handleFilter}
+                        class="filter-btn">
+                    </lightning-button>
+                </template>
+            </div>
+
+            <!-- Loading -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading equipment..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <template if:true={hasEquipmentData}>
+                    <div class="count-label slds-m-bottom_x-small">{equipmentCountLabel}</div>
+
+                    <template if:true={hasFilterMatches}>
+                        <div class="epc-datatable-wrap">
+                            <lightning-datatable
+                                key-field="Id"
+                                data={filtered}
+                                columns={columns}
+                                hide-checkbox-column
+                                column-widths-mode="auto"
+                                min-column-width="80"
+                                onrowaction={handleRowAction}>
+                            </lightning-datatable>
+                        </div>
+                    </template>
+
+                    <template if:false={hasFilterMatches}>
+                        <div class="empty-state empty-state--compact">
+                            <lightning-icon icon-name="utility:filterList" size="medium" alternative-text="No matches"></lightning-icon>
+                            <h3 class="empty-title">{emptyFilterTitle}</h3>
+                            <p class="empty-msg">{emptyFilterMessage}</p>
+                        </div>
+                    </template>
+                </template>
+
+                <template if:false={hasEquipmentData}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="standard:asset_object" size="large" alternative-text="No equipment"></lightning-icon>
+                        <h3 class="empty-title">No equipment yet</h3>
+                        <p class="empty-msg">Add equipment to this project to track utilisation and hours logged.</p>
+                        <lightning-button label="New Equipment" variant="brand" icon-name="utility:add" onclick={handleNewEquipment} class="slds-m-top_small"></lightning-button>
+                    </div>
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

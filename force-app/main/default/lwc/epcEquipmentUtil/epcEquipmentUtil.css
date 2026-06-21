@@ -1,0 +1,69 @@
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #1589ee;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 90px;
+}
+.kpi-card.kpi-success { border-left-color: #027e46; background: #f0faf5; }
+.kpi-card.kpi-warning { border-left-color: #ff9e2c; background: #fffbf0; }
+.kpi-card.kpi-info    { border-left-color: #706e6b; background: #f8f8f8; }
+.kpi-label {
+    font-size: 0.7rem;
+    color: #706e6b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kpi-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #032d60;
+    margin-top: 2px;
+}
+
+/* status cell colors via cellAttributes */
+.eq-inuse { font-weight: 600; color: #027e46; }
+.eq-maint { font-weight: 600; color: #c23934; }
+.eq-idle  { color: #706e6b; }
+
+/* util% cell */
+.util-high { font-weight: 700; color: #027e46; }
+.util-mid  { font-weight: 600; color: #ff9e2c; }
+.util-low  { color: #c23934; }
+
+.filter-btn { margin-right: 4px; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.count-label {
+    font-size: 0.75rem;
+    color: #706e6b;
+    font-weight: 500;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1px dashed #dddbda;
+}
+.empty-state--compact { padding: 2rem 1.5rem; }
+.empty-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3e3e3c;
+    margin-top: 0.75rem;
+}
+.empty-msg {
+    font-size: 0.8125rem;
+    color: #706e6b;
+    margin-top: 0.25rem;
+    max-width: 360px;
+}

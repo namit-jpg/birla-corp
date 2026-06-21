@@ -1,0 +1,173 @@
+import { LightningElement, api, wire } from 'lwc';
+import { loadScript, loadStyle } from 'lightning/platformResourceLoader';
+import FRAPPE_GANTT from '@salesforce/resourceUrl/frappe_gantt';
+import getWBSFlat from '@salesforce/apex/WBSTreeController.getWBSFlat';
+
+export default class GanttChart extends LightningElement {
+    @api recordId;
+
+    isLoading = true;
+    hasError = false;
+    errorMessage;
+    isEmpty = false;
+    viewMode = 'Week';
+    highlightCritical = false;
+    criticalCount = 0;
+    totalCount = 0;
+    _gantt;
+    _tasks = [];
+    _criticalIds = new Set();
+    _libLoaded = false;
+    _dataLoaded = false;
+    _wheelHandler = null;
+    _ganttEl = null;
+
+    get dayVariant()   { return this.viewMode === 'Day'   ? 'brand' : 'neutral'; }
+    get weekVariant()  { return this.viewMode === 'Week'  ? 'brand' : 'neutral'; }
+    get monthVariant() { return this.viewMode === 'Month' ? 'brand' : 'neutral'; }
+    get criticalVariant() { return this.highlightCritical ? 'destructive' : 'neutral'; }
+
+    get showLegend() { return !this.isLoading && !this.hasError && !this.isEmpty; }
+
+    get criticalSummary() {
+        return `${this.criticalCount} of ${this.totalCount} tasks on the critical path`;
+    }
+
+    connectedCallback() {
+        Promise.all([
+            loadStyle(this, FRAPPE_GANTT + '/frappe-gantt.css'),
+            loadScript(this, FRAPPE_GANTT + '/frappe-gantt.js')
+        ])
+        .then(() => {
+            this._libLoaded = true;
+            this.tryRender();
+        })
+        .catch(e => {
+            this.hasError = true;
+            this.isLoading = false;
+            this.errorMessage = 'Failed to load Gantt library: ' + (e.message || e);
+        });
+    }
+
+    @wire(getWBSFlat, { projectId: '$recordId' })
+    wiredTasks({ data, error }) {
+        if (data) {
+            this._tasks = data;
+            this._dataLoaded = true;
+            this.tryRender();
+        } else if (error) {
+            this.hasError = true;
+            this.isLoading = false;
+            this.errorMessage = error.body?.message ?? 'Failed to load WBS data.';
+        }
+    }
+
+    tryRender() {
+        if (!this._libLoaded || !this._dataLoaded) return;
+        this.isLoading = false;
+
+        if (!this._tasks.length) {
+            this.isEmpty = true;
+            return;
+        }
+
+        this._criticalIds = new Set(this._tasks.filter(t => t.isCritical).map(t => t.id));
+        this.criticalCount = this._criticalIds.size;
+        this.totalCount = this._tasks.length;
+
+        const knownIds = new Set(this._tasks.map(t => t.id));
+        const tasks = this._tasks.map(t => ({
+            id: t.id,
+            name: t.name,
+            start: t.start,
+            end: t.endDate,
+            progress: t.progress ?? 0,
+            dependencies: (t.dependencies || '')
+                .split(',')
+                .map(s => s.trim())
+                .filter(id => knownIds.has(id))
+                .join(','),
+            custom_class: t.isCritical ? 'gantt-critical' : ''
+        }));
+
+        const container = this.refs.ganttContainer;
+        container.innerHTML =
+            '<style>' +
+            '.gantt .bar-wrapper.gantt-critical .bar{fill:#fdb6b6;}' +
+            '.gantt .bar-wrapper.gantt-critical .bar-progress{fill:#ea001e;}' +
+            '.gantt .arrow-critical{stroke:#ea001e;stroke-width:1.8;}' +
+            '.dim-noncritical .gantt .bar-wrapper:not(.gantt-critical){opacity:0.25;}' +
+            '.dim-noncritical .gantt path[data-from]:not(.arrow-critical){opacity:0.15;}' +
+            '.dim-noncritical .gantt .bar-wrapper.gantt-critical .bar{fill:#f8a3a3;}' +
+            '</style>' +
+            '<svg></svg>';
+        const svg = container.querySelector('svg');
+
+        try {
+            // eslint-disable-next-line no-undef
+            this._gantt = new Gantt(svg, tasks, {
+                view_mode: this.viewMode,
+                date_format: 'YYYY-MM-DD'
+            });
+            this.markCriticalArrows();
+            this.applyHighlightClass();
+            this._attachWheelScroll();
+        } catch (e) {
+            this.hasError = true;
+            this.errorMessage = 'Gantt render failed: ' + (e.message || e);
+        }
+    }
+
+    markCriticalArrows() {
+        const container = this.refs.ganttContainer;
+        if (!container) return;
+        container.querySelectorAll('path[data-from]').forEach(p => {
+            const from = p.getAttribute('data-from');
+            const to = p.getAttribute('data-to');
+            if (this._criticalIds.has(from) && this._criticalIds.has(to)) {
+                p.classList.add('arrow-critical');
+            }
+        });
+    }
+
+    applyHighlightClass() {
+        const container = this.refs.ganttContainer;
+        if (!container) return;
+        container.classList.toggle('dim-noncritical', this.highlightCritical);
+    }
+
+    handleViewMode(event) {
+        this.viewMode = event.target.dataset.mode;
+        if (this._gantt) {
+            this._gantt.change_view_mode(this.viewMode);
+            this.markCriticalArrows();
+        }
+    }
+
+    handleToggleCritical() {
+        this.highlightCritical = !this.highlightCritical;
+        this.applyHighlightClass();
+    }
+
+    _attachWheelScroll() {
+        const el = this.refs.ganttContainer;
+        if (!el) return;
+        this._ganttEl = el;
+        if (this._wheelHandler) el.removeEventListener('wheel', this._wheelHandler);
+        this._wheelHandler = (evt) => {
+            if (el.scrollWidth <= el.clientWidth) return;
+            evt.preventDefault();
+            const delta = evt.deltaMode === 1 ? evt.deltaY * 30
+                        : evt.deltaMode === 2 ? evt.deltaY * 300
+                        : evt.deltaY;
+            el.scrollLeft += delta;
+        };
+        el.addEventListener('wheel', this._wheelHandler, { passive: false, capture: true });
+    }
+
+    disconnectedCallback() {
+        if (this._ganttEl && this._wheelHandler) {
+            this._ganttEl.removeEventListener('wheel', this._wheelHandler, { capture: true });
+        }
+    }
+}

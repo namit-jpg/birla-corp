@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WBS_Item__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>WBS Item</label>
+    <referenceTo>WBS_Item__c</referenceTo>
+    <relationshipLabel>Daily Progress Reports</relationshipLabel>
+    <relationshipName>Daily_Progress_Reports</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

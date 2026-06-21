@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Dashboard Magic tool for Analytics Team Who: Analytics Team</description>
+    <flexiPage>SDO_Analytics_App_TRCM_Dashboard_Magic</flexiPage>
+    <label>Dashboard Magic</label>
+    <motif>Custom83: Pencil</motif>
+</CustomTab>

@@ -1,0 +1,83 @@
+/* KPI Strip */
+.kpi-strip { flex-wrap: nowrap; }
+.kpi-card {
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-left: 4px solid #1589ee;
+    border-radius: 4px;
+    padding: 0.625rem 0.75rem;
+    min-width: 110px;
+}
+.kpi-card.kpi-error   { border-left-color: #c23934; background: #fef1f0; }
+.kpi-card.kpi-warning { border-left-color: #ff9e2c; background: #fffbf0; }
+.kpi-card.kpi-success { border-left-color: #027e46; background: #f0faf5; }
+.kpi-label {
+    font-size: 0.7rem;
+    color: #706e6b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kpi-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #032d60;
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+/* Work front cards */
+.front-card {
+    border: 1px solid #dddbda;
+    border-radius: 6px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+}
+.front-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
+.front-blocked  { border-left: 4px solid #c23934; background: #fef1f0; }
+.front-released { border-left: 4px solid #027e46; background: #f0faf5; }
+.front-ready    { border-left: 4px solid #1589ee; background: #f0f7ff; }
+.front-name { font-size: 0.875rem; color: #032d60; }
+.front-meta { font-size: 0.75rem; color: #706e6b; margin-top: 3px; }
+.front-blocker { font-size: 0.75rem; color: #c23934; font-weight: 600; margin-top: 3px; }
+
+/* Badge classes applied via cellAttributes */
+.badge-critical { font-weight: 700; }
+.badge-open     { font-weight: 600; }
+.safety-alert   { font-weight: 700; }
+
+.filter-btn { margin-right: 4px; }
+
+.epc-datatable-wrap { width: 100%; }
+
+.count-label {
+    font-size: 0.75rem;
+    color: #706e6b;
+    font-weight: 500;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1px dashed #dddbda;
+}
+.empty-state--compact { padding: 2rem 1.5rem; }
+.empty-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3e3e3c;
+    margin-top: 0.75rem;
+}
+.empty-msg {
+    font-size: 0.8125rem;
+    color: #706e6b;
+    margin-top: 0.25rem;
+    max-width: 360px;
+}
