@@ -42,7 +42,4 @@
     <fieldPermissions><field>WBS_Template_Item__c.Budget_Percentage__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
     <fieldPermissions><field>WBS_Template_Item__c.Control_Account__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
     <fieldPermissions><field>WBS_Template_Item__c.Discipline__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
-    <fieldPermissions><field>WBS_Template_Item__c.Predecessor_Code__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
-    <fieldPermissions><field>WBS_Template_Item__c.Dependency_Type__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
-    <fieldPermissions><field>WBS_Template_Item__c.Lag_Days__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
 </PermissionSet>

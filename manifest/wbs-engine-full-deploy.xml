@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- WBS Dependency object (new) -->
+    <types>
+        <members>WBS_Dependency__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Slack Settings custom setting (new) -->
+    <types>
+        <members>Slack_Settings__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- WBS_Dependency__c fields -->
+    <types>
+        <members>WBS_Dependency__c.Predecessor__c</members>
+        <members>WBS_Dependency__c.Successor__c</members>
+        <members>WBS_Dependency__c.Dependency_Type__c</members>
+        <members>WBS_Dependency__c.Lag_Days__c</members>
+        <!-- WBS_Item__c new fields -->
+        <members>WBS_Item__c.Early_Start__c</members>
+        <members>WBS_Item__c.Early_Finish__c</members>
+        <members>WBS_Item__c.Late_Start__c</members>
+        <members>WBS_Item__c.Late_Finish__c</members>
+        <members>WBS_Item__c.Actual_Start__c</members>
+        <members>WBS_Item__c.Actual_Finish__c</members>
+        <members>WBS_Item__c.Float_Days__c</members>
+        <members>WBS_Item__c.Delay_Risk_Score__c</members>
+        <members>WBS_Item__c.Delay_Likelihood__c</members>
+        <members>WBS_Item__c.Likely_To_Delay_Project__c</members>
+        <members>WBS_Item__c.Is_Actual_Start_Crossed__c</members>
+        <members>WBS_Item__c.Custodian__c</members>
+        <members>WBS_Item__c.Assignee__c</members>
+        <members>WBS_Item__c.Project_Delay_Reason__c</members>
+        <!-- Slack Settings field -->
+        <members>Slack_Settings__c.Bot_Token__c</members>
+        <name>CustomField</name>
+    </types>
+
+    <!-- Remote site for Slack API callouts -->
+    <types>
+        <members>Slack_API</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+
+    <!-- Permission set -->
+    <types>
+        <members>WBS_Builder_Admin</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <!-- Apex classes (non-test first, tests after — Salesforce handles ordering) -->
+    <types>
+        <members>TriggerHelper</members>
+        <members>CPMEngine</members>
+        <members>WBSDelayRiskService</members>
+        <members>WBSDelayAlertService</members>
+        <members>SlackService</members>
+        <members>WBSDelayMonitorSchedulable</members>
+        <members>WBSDelayEngineTest</members>
+        <name>ApexClass</name>
+    </types>
+
+    <version>66.0</version>
+</Package>

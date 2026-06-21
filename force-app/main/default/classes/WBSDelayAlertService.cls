@@ -19,15 +19,16 @@ public with sharing class WBSDelayAlertService {
         if (projectId == null) return 0;
 
         Project__c proj = [
-            SELECT Id, Name, Project_Manager__c, End_Date__c, Baseline_Finish__c, Planned_Finish_Variance__c
+            SELECT Id, Name, Project_Manager__c, End_Date__c
             FROM Project__c WHERE Id = :projectId LIMIT 1
         ];
-        Boolean projectDelayed = proj.Planned_Finish_Variance__c != null && proj.Planned_Finish_Variance__c > 0;
+        // projectDelayed is determined after we collect the at-risk items below.
+        Boolean projectDelayed = false;
 
         List<WBS_Item__c> items = [
             SELECT Id, Code__c, Name__c, Parent_WBS__c, Custodian__c, Assignee__c,
                    Is_Actual_Start_Crossed__c, Delay_Likelihood__c, Likely_To_Delay_Project__c,
-                   Critical_Path__c
+                   Critical_Path__c, Percent_Complete__c
             FROM WBS_Item__c WHERE Project__c = :projectId
         ];
         if (items.isEmpty()) return 0;
@@ -56,6 +57,11 @@ public with sharing class WBSDelayAlertService {
             }
         }
         if (delayed.isEmpty()) return 0;
+
+        // A project is considered delayed when at least one leaf is flagged as likely to delay.
+        for (WBS_Item__c w : delayed) {
+            if (w.Likely_To_Delay_Project__c == true) { projectDelayed = true; break; }
+        }
 
         // successor assignees for delayed items (predecessor -> successor)
         Map<Id, Set<Id>> successorAssigneesByPred = new Map<Id, Set<Id>>();
@@ -93,8 +99,7 @@ public with sharing class WBSDelayAlertService {
                 if (proj.Project_Manager__c != null) recipients.add(proj.Project_Manager__c);
                 recipients.addAll(criticalCustodians);
                 if (successorAssigneesByPred.containsKey(w.Id)) recipients.addAll(successorAssigneesByPred.get(w.Id));
-                body += ' This is projected to push the project end date out by ' +
-                        proj.Planned_Finish_Variance__c.setScale(0) + ' day(s).';
+                body += ' This is projected to impact the project completion date.';
             }
 
             if (recipients.isEmpty()) continue;
@@ -116,7 +121,40 @@ public with sharing class WBSDelayAlertService {
         for (Messaging.SingleEmailMessage m : emails) if (m != null) toSend.add(m);
         if (!toSend.isEmpty() && !Test.isRunningTest()) Messaging.sendEmail(toSend, false);
 
+        // Post to Slack channel named after the project (e.g. PRJ-00049 → #prj-00049).
+        if (!Test.isRunningTest()) {
+            postToSlack(proj, delayed);
+        }
+
         return sent;
+    }
+
+    private static void postToSlack(Project__c proj, List<WBS_Item__c> delayed) {
+        List<Map<String, Object>> critItems = new List<Map<String, Object>>();
+        List<Map<String, Object>> highItems = new List<Map<String, Object>>();
+        for (WBS_Item__c w : delayed) {
+            if (w.Delay_Likelihood__c == 'Critical' || w.Delay_Likelihood__c == 'High') {
+                Map<String, Object> entry = new Map<String, Object>{
+                    'code' => w.Code__c != null ? w.Code__c : '',
+                    'name' => w.Name__c  != null ? w.Name__c  : '',
+                    'pct'  => w.Percent_Complete__c != null ? w.Percent_Complete__c.setScale(0) : 0
+                };
+                if (w.Delay_Likelihood__c == 'Critical') {
+                    critItems.add(entry);
+                } else {
+                    highItems.add(entry);
+                }
+            }
+        }
+        if (critItems.isEmpty() && highItems.isEmpty()) return;
+
+        String channel = proj.Name.toLowerCase();
+        SlackService.postDelayAlertAsync(
+            channel,
+            proj.Name,
+            JSON.serialize(critItems),
+            JSON.serialize(highItems)
+        );
     }
 
     private static Id notificationTypeId() {

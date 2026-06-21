@@ -221,10 +221,7 @@ public with sharing class CPMEngine {
                 weightedProg += b * p;
             }
         }
-        Decimal overall = totalBudget > 0 ? (weightedProg / totalBudget).setScale(2) : 0;
-        TriggerHelper.isRunning = true;
-        update new Project__c(Id = projectId, Percent_Complete__c = overall);
-        TriggerHelper.isRunning = false;
+        // Percent_Complete__c on Project__c is a formula roll-up — not writable.
     }
 
     // -- Build dependency links from the junction ----------------------

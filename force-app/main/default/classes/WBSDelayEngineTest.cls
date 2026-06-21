@@ -10,7 +10,6 @@ private class WBSDelayEngineTest {
         // Project already behind: End_Date is past Baseline_Finish (variance > 0).
         Project__c p = new Project__c(
             Start_Date__c = Date.today().addDays(-20),
-            Baseline_Finish__c = Date.today().addDays(-5),
             End_Date__c = Date.today().addDays(5),
             Project_Manager__c = me()
         );
