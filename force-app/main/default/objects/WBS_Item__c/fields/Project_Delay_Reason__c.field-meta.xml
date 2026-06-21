@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Delay_Reason__c</fullName>
+    <description>Plain-language summary of why this activity is at risk and which downstream activities are impacted. Generated automatically by the delay risk engine each time CPM runs.</description>
+    <label>Project Delay Reason</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

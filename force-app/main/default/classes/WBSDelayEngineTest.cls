@@ -40,7 +40,7 @@ private class WBSDelayEngineTest {
 
         WBS_Item__c leaf = [
             SELECT Delay_Likelihood__c, Delay_Risk_Score__c, Likely_To_Delay_Project__c,
-                   Is_Actual_Start_Crossed__c, AI_Insight__c
+                   Is_Actual_Start_Crossed__c, Project_Delay_Reason__c
             FROM WBS_Item__c WHERE Code__c = '1.1' AND Project__c = :p.Id LIMIT 1
         ];
         System.assertEquals(true, leaf.Is_Actual_Start_Crossed__c, 'actual start crossed planned');
@@ -48,7 +48,7 @@ private class WBSDelayEngineTest {
         System.assert(leaf.Delay_Likelihood__c == 'High' || leaf.Delay_Likelihood__c == 'Critical',
             'leaf high/critical: ' + leaf.Delay_Likelihood__c);
         System.assertEquals(true, leaf.Likely_To_Delay_Project__c, 'flagged as likely to delay project');
-        System.assertNotEquals(null, leaf.AI_Insight__c, 'rule narrative written');
+        System.assertNotEquals(null, leaf.Project_Delay_Reason__c, 'delay reason narrative written');
         System.assert(sent >= 1, 'at least one custom notification sent');
     }
 

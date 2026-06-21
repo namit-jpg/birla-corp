@@ -22,6 +22,7 @@
     <fieldPermissions><field>WBS_Item__c.Delay_Likelihood__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
     <fieldPermissions><field>WBS_Item__c.Likely_To_Delay_Project__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
     <fieldPermissions><field>WBS_Item__c.Is_Actual_Start_Crossed__c</field><readable>true</readable><editable>false</editable></fieldPermissions>
+    <fieldPermissions><field>WBS_Item__c.Project_Delay_Reason__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
 
     <fieldPermissions><field>WBS_Dependency__c.Dependency_Type__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
     <fieldPermissions><field>WBS_Dependency__c.Lag_Days__c</field><readable>true</readable><editable>true</editable></fieldPermissions>
