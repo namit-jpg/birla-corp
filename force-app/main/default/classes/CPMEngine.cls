@@ -222,6 +222,11 @@ public with sharing class CPMEngine {
             }
         }
         // Percent_Complete__c on Project__c is a formula roll-up — not writable.
+
+        // -- Refresh delay-risk scores + plain-language reason narratives --
+        // Runs on every recalc (DPR rollup, slider edit, dependency change, etc.)
+        // so Project_Delay_Reason__c never goes stale relative to live progress.
+        WBSDelayRiskService.evaluate(projectId);
     }
 
     // -- Build dependency links from the junction ----------------------
