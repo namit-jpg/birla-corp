@@ -3,7 +3,6 @@
     <fullName>Description__c</fullName>
     <label>Description</label>
     <length>2000</length>
-    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>LongTextArea</type>
     <visibleLines>3</visibleLines>

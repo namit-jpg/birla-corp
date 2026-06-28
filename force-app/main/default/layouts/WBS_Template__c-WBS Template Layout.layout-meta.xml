@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
 
-    <!-- ── Action bar ──────────────────────────────────────────────── -->
+    <!-- ── Action bar ──────────────────────────────────────────────────────── -->
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
@@ -27,7 +27,7 @@
         </platformActionListItems>
     </platformActionList>
 
-    <!-- ── Section 1: Identity ─────────────────────────────────────── -->
+    <!-- ── Template Details ────────────────────────────────────────────────── -->
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
@@ -35,73 +35,28 @@
         <label>Template Details</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Template_Type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Is_Active__c</field>
+                <behavior>Required</behavior>
+                <field>Name</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Industry__c</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Project_Type__c</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Name</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Template_Version__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Complexity__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Complexity_Level__c</field>
+                <field>Is_Active__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
 
-    <!-- ── Section 2: Scope ────────────────────────────────────────── -->
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Scope and Duration</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Duration__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Created_By_Company__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Project__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Work_Package__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-
-    <!-- ── Section 3: Description ──────────────────────────────────── -->
+    <!-- ── Description ─────────────────────────────────────────────────────── -->
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
@@ -116,7 +71,7 @@
         <style>OneColumn</style>
     </layoutSections>
 
-    <!-- ── Section 4: System ───────────────────────────────────────── -->
+    <!-- ── System Information ──────────────────────────────────────────────── -->
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>true</detailHeading>
@@ -137,7 +92,7 @@
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
 
-    <!-- ── Custom Links placeholder ────────────────────────────────── -->
+    <!-- ── Custom Links placeholder ────────────────────────────────────────── -->
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>

@@ -6,13 +6,28 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>false</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
-            <value><fullName>Oil &amp; Gas</fullName><default>false</default><label>Oil &amp; Gas</label></value>
-            <value><fullName>Infrastructure</fullName><default>false</default><label>Infrastructure</label></value>
-            <value><fullName>Manufacturing</fullName><default>false</default><label>Manufacturing</label></value>
-            <value><fullName>Commercial</fullName><default>false</default><label>Commercial</label></value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+                <label>Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

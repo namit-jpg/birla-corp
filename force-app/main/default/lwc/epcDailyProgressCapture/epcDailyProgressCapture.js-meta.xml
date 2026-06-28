@@ -8,7 +8,7 @@
         <target>lightning__HomePage</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__RecordPage">
+        <targetConfig targets="lightning__AppPage,lightning__RecordPage">
             <supportedFormFactors>
                 <supportedFormFactor type="Large"/>
                 <supportedFormFactor type="Small"/>

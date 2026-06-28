@@ -33,9 +33,8 @@ public with sharing class WBSTemplateImportService {
         }
 
         // ── 1. Create the template header ───────────────────────────────────
-        // Name is auto-number (WT-XXXX); user label goes in Template_Type__c.
         WBS_Template__c tmpl = new WBS_Template__c(
-            Template_Type__c = req.templateName,
+            Name             = req.templateName,
             Industry__c      = req.industry,
             Project_Type__c  = req.projectType,
             Description__c   = req.description,
