@@ -1,0 +1,203 @@
+<template>
+    <lightning-card title="Import WBS Template from Excel" icon-name="utility:upload">
+
+        <!-- ── STEP 1: Form + File Upload ── -->
+        <template lwc:if={isFormStep}>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-wrap slds-gutters">
+
+                    <!-- Template metadata -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input
+                            label="Template Name"
+                            value={templateName}
+                            onchange={handleName}
+                            required
+                            placeholder="e.g. Cement Plant EPC — Full Schedule"
+                        ></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-combobox
+                            label="Industry"
+                            value={industry}
+                            options={industryOptions}
+                            onchange={handleIndustry}
+                            placeholder="Select industry"
+                        ></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-combobox
+                            label="Project Type"
+                            value={projectType}
+                            options={projectTypeOptions}
+                            onchange={handleProjectType}
+                            placeholder="Select type"
+                        ></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input
+                            label="Description (optional)"
+                            value={description}
+                            onchange={handleDescription}
+                            placeholder="Brief description of this template"
+                        ></lightning-input>
+                    </div>
+
+                    <!-- File upload -->
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">
+                                <abbr class="slds-required" title="required">*</abbr>
+                                Upload Excel or CSV File
+                            </label>
+                            <div class="slds-form-element__control">
+                                <input
+                                    type="file"
+                                    accept=".xlsx,.xls,.csv"
+                                    onchange={handleFileChange}
+                                    class="slds-file-selector__input"
+                                />
+                            </div>
+                            <div class="slds-form-element__help slds-m-top_xx-small">
+                                Required columns: <strong>Code</strong>, <strong>Name</strong>.
+                                Optional: Duration, Budget%, Control Account, Discipline, Predecessor, Dep Type, Lag Days.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parsed summary -->
+                    <template lwc:if={rowCount}>
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_small">
+                            <div class="slds-box slds-theme_shade slds-p-around_small">
+                                ✅ <strong>{rowCount} activities</strong> parsed from <em>{fileName}</em>
+                            </div>
+                        </div>
+                    </template>
+
+                    <!-- Errors -->
+                    <template lwc:if={hasErrors}>
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_small">
+                            <div class="slds-box slds-theme_error slds-p-around_small">
+                                <template for:each={errors} for:item="err">
+                                    <p key={err}>⚠️ {err}</p>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Expected format hint -->
+                <div class="slds-m-top_medium slds-box slds-theme_shade">
+                    <p class="slds-text-title_caps slds-m-bottom_xx-small">Expected column headers (row 1)</p>
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" style="font-size:0.8rem">
+                        <thead>
+                            <tr>
+                                <th>Code *</th><th>Name *</th><th>Duration</th><th>Budget%</th>
+                                <th>Control Account</th><th>Discipline</th><th>Predecessor</th>
+                                <th>Dep Type</th><th>Lag Days</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td><td>Civil Works</td><td></td><td></td><td>Civil</td><td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1</td><td>Foundation</td><td>30</td><td>15</td><td>Civil</td><td>Civil</td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>1.2</td><td>Structural Steel</td><td>45</td><td>20</td><td>Civil</td><td>Civil</td><td>1.1</td><td>FS</td><td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="slds-m-top_xx-small" style="font-size:0.75rem;color:#5a6872">
+                        * Required. Hierarchy is derived from the Code column (1 → 1.1 → 1.1.1).
+                        Accepts .xlsx, .xls, or .csv.
+                    </p>
+                </div>
+
+                <div class="slds-m-top_medium slds-grid slds-grid_align-end slds-gutters">
+                    <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+                    <lightning-button
+                        label="Review & Import →"
+                        variant="brand"
+                        disabled={cannotProceed}
+                        onclick={handleNext}
+                    ></lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- ── STEP 2: Preview ── -->
+        <template lwc:if={isPreviewStep}>
+            <div class="slds-p-around_medium">
+                <div class="slds-box slds-theme_shade slds-p-horizontal_medium slds-p-vertical_small slds-m-bottom_medium">
+                    <strong>{templateName}</strong>
+                    <template lwc:if={industry}> &nbsp;·&nbsp; {industry}</template>
+                    <template lwc:if={projectType}> &nbsp;·&nbsp; {projectType}</template>
+                    &nbsp;·&nbsp; <strong>{rowCount} activities</strong>
+                </div>
+
+                <template lwc:if={hasErrors}>
+                    <div class="slds-box slds-theme_error slds-p-around_small slds-m-bottom_medium">
+                        <template for:each={errors} for:item="err">
+                            <p key={err}>⚠️ {err}</p>
+                        </template>
+                    </div>
+                </template>
+
+                <p class="slds-text-body_small slds-m-bottom_x-small">
+                    Showing first {previewRows.length} of {rowCount} activities:
+                </p>
+
+                <div style="overflow-x:auto">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" style="font-size:0.82rem">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th>Code</th><th>Name</th><th>Duration</th>
+                                <th>Budget%</th><th>Control Acct</th>
+                                <th>Discipline</th><th>Predecessor</th><th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={previewRows} for:item="row">
+                                <tr key={row._idx}>
+                                    <td><strong>{row.code}</strong></td>
+                                    <td>{row.name}</td>
+                                    <td>{row.duration}</td>
+                                    <td>{row.budgetPct}</td>
+                                    <td>{row.controlAccount}</td>
+                                    <td>{row.discipline}</td>
+                                    <td>{row.predecessorCode}</td>
+                                    <td>{row.depType}</td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+                <template lwc:if={previewLimited}>
+                    <p class="slds-text-body_small slds-m-top_xx-small" style="color:#5a6872">
+                        … and {rowCount} total activities will be imported.
+                    </p>
+                </template>
+
+                <div class="slds-m-top_medium slds-grid slds-grid_align-end slds-gutters">
+                    <lightning-button label="← Back" onclick={handleBack}></lightning-button>
+                    <lightning-button
+                        label="Confirm Import"
+                        variant="brand"
+                        onclick={handleImport}
+                    ></lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- ── STEP 3: Saving ── -->
+        <template lwc:if={isSaving}>
+            <div class="slds-p-around_large slds-align_absolute-center" style="text-align:center">
+                <lightning-spinner alternative-text="Importing..." size="medium"></lightning-spinner>
+                <p class="slds-m-top_medium">Importing {rowCount} activities into Salesforce…</p>
+            </div>
+        </template>
+
+    </lightning-card>
+</template>
